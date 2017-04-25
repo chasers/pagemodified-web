@@ -8,11 +8,16 @@ meta-title: Home
 meta-description: Home page.
 ---
 
+<div id="videoPlayerContainer" class="video-modal">
+  <button>X Close</button>
+  <iframe src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <div class="slide hero">
 	<div class="inner">
 		<h2>Page Modified</h2>
 		<h1>The fastest crawler in the west.</h1>
-		<div class="video-ctr">Video</div>
+		{% include video.html title="Page Modified Demo" videoid="nZlzQurZRdg" layout="home-demo" image="video-thumbnail.png" %}
 	</div>
 </div>
 

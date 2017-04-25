@@ -1,7 +1,9 @@
 // Main JS File Unminified 
 $(function(){
 
-	// Mobile Nav
+  /*
+   * Mobile Nav
+   */
 	$('.mobile-toggle').click(function(event) {
 	    event.preventDefault();
 		$('.nav').toggleClass('nav-open');
@@ -9,11 +11,8 @@ $(function(){
 
   /*
    * Video Player Modal
-   * 
-   * 
-  */
+   */
   $('a[rel="videoPlayerToggle"]').click(function(event) {
-
     event.preventDefault();
     var videoID = $(this).attr('data-videoID');
    
@@ -25,6 +24,4 @@ $(function(){
     $('#videoPlayerContainer').hide('fast');
     $('#videoPlayerContainer iframe').attr('src','');
   });
-
-
 });
