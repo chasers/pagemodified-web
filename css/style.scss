@@ -9,6 +9,7 @@
 @import 'buttons';
 
 @import 'slide';
+@import 'video';
 
 * {
   -webkit-box-sizing: border-box;
@@ -34,7 +35,9 @@ p {
   line-height: 1.5em;
   margin-bottom: 1em;
 }
-
+img {
+  width: 100%;
+}
 // Headers
 h1, h2, h3, h4 {
   font-family: $accent-font;
