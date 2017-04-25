@@ -1,0 +1,32 @@
+.features {
+	ul {
+		overflow: hidden;
+		border-bottom: 1px solid $gray;
+	}
+	li {
+		width: 50%;
+		float: left;
+		line-height: 45px;
+		border-top: 1px solid $gray;
+		
+		font-size: 12px;
+		text-align: center;
+		background: $page-background;
+	}
+}
+
+// Responsive ------------------------------------------------------------------
+@media all and (min-width: 420px) {
+// Tablet & Up
+.features {
+	li {
+		width: 25%;
+	}
+}
+// End Tablet & Up
+}
+
+@media all and (min-width: 800px) {
+// Desktop & Up
+
+}

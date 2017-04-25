@@ -4,12 +4,16 @@
 @import 'variables';
 
 @import 'reset';
-@import 'icons';
 @import 'site-frame';
 @import 'buttons';
 
 @import 'slide';
 @import 'video';
+
+@import 'hero';
+@import 'beta-signup';
+@import 'benefits';
+@import 'features';
 
 * {
   -webkit-box-sizing: border-box;
