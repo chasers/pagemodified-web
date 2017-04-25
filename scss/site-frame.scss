@@ -76,7 +76,7 @@ body {
 	position: relative;
 	&:before {
 		opacity: .15;
-		background-image: url('/img/topo-bg-1.png');
+		background-image: url($baseurl+'/img/topo-bg-1.png');
 		background-repeat: repeat;
 		background-size: 250px 250px;
 		background-position: center center;
