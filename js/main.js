@@ -10,6 +10,19 @@ $(function(){
 	});
 
   /*
+   * Scroll to 
+   */
+  $('[rel="scrollTo"]').click(function() {
+      event.preventDefault();
+      var tag = $(this).attr('data-scrollTo');
+      scrollToAnchor(tag);
+  });
+  function scrollToAnchor(aid){
+      var aTag = $('#'+ aid +'');
+      $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  }
+
+  /*
    * Video Player Modal
    */
   $('a[rel="videoPlayerToggle"]').click(function(event) {

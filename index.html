@@ -7,12 +7,6 @@ path: ../
 meta-title: Home
 meta-description: Home page.
 ---
-
-<div id="videoPlayerContainer" class="video-modal">
-  <button>X Close</button>
-  <iframe src="" frameborder="0" allowfullscreen></iframe>
-</div>
-
 <div class="slide hero">
 	<div class="inner">
 		<h2>Page Modified</h2>
@@ -20,10 +14,10 @@ meta-description: Home page.
 		{% include video.html title="Page Modified Demo" videoid="nZlzQurZRdg" layout="home-demo" image="video-thumbnail.png" %}
 	</div>
 </div>
-
+<div id="signup">
 {% include beta-signup-form.html %}
-
-<div class="slide benefits">
+</div>
+<div class="slide benefits" id="benefits">
 	<div class="inner">
 		{% include benefit-item.html title="Web-based" icon="" text="Our crawler is web-based, so your computer won’t get bogged down when you have to run a bunch of crawls or need to crawl a large website." %}
 		{% include benefit-item.html title="Scalable" icon="" text="Crawl large site, sections of sites or easily manage lots of sites with Page Modified." %}
@@ -32,7 +26,7 @@ meta-description: Home page.
 		{% include benefit-item.html title="Historical" icon="" text="We retain all your historical data so you can easily compare crawl vs crawl and track changes to your site or a competitor site easily." %}
 	</div>
 </div>
-<div class="slide features">
+<div class="slide features" id="features">
 	<div class="inner">
 		<h2>Features</h2>
 		<ul>
