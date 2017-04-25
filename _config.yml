@@ -1,0 +1,10 @@
+highlighter: rouge
+github: [Repository metadata]
+
+baseurl: "https://valleyhosting.github.io/pagemodified_website"
+
+# Sass
+sass:
+  sass_dir: scss
+  style: :compressed
+  line_numbers: true
