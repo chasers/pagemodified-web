@@ -1,0 +1,24 @@
+.slide {
+    overflow: hidden;
+    .inner {
+        max-width: $page-size;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+}
+
+// Responsive ------------------------------------------------------------------
+@media all and (min-width: 420px) {
+// Tablet & Up
+.slide {
+    .inner {
+        padding: 50px 30px;
+    }
+}
+// End Tablet & Up
+}
+
+@media all and (min-width: 800px) {
+// Desktop & Up
+
+}
