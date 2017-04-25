@@ -1,7 +1,7 @@
 $body-background: #fff;
 $page-background: $body-background;
 
-$main-color: #1EBBED;
+$main-color: #1EBBED; //blue
 
 $white: #fff;
 $gray-lightest: #f5f4f2;
@@ -11,7 +11,7 @@ $gray-dark: #5B5B5E;
 $black: #000;
 
 $font-family: Arial, 'Lucida Grande', sans-serif;
-$accent-font: Arial, 'Lucida Grande', sans-serif;
+$accent-font: 'langdonregular', Arial, 'Lucida Grande', sans-serif;
 
 $font-color: $black;
 $link: $main-color;
@@ -22,6 +22,18 @@ $page-size: 960px;
 
 $desktop-side-space: 20px;
 $mobile-side-space: 30px;
+
+@font-face {
+    font-family: 'langdonregular';
+    src: url('fonts/langdon.eot');
+    src: url('fonts/langdon.eot?#iefix') format('embedded-opentype'),
+         url('fonts/langdon.woff2') format('woff2'),
+         url('fonts/langdon.woff') format('woff'),
+         url('fonts/langdon.ttf') format('truetype'),
+         url('fonts/langdon.svg#langdonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @mixin transition($transitions) {
     -webkit-transition: $transitions;

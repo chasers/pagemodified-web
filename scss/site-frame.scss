@@ -7,8 +7,8 @@ body {
 
 .site-navigation {
 	@include transition(all 1s);
-	background: #fff;
-	box-shadow: 0 0 10px rgba(#000,.3);
+	background: $white;
+	box-shadow: 0 0 10px rgba($black,.3);
 
 	position: fixed;
 	top: 0; left: 0; right: 0;
@@ -20,10 +20,7 @@ body {
 		display: inline-block;
 		float: left;
 		margin: 8px 10px 0;
-		//line-height: $nav-height;
-		//font-family: $accent-font;
-		//text-transform: uppercase;
-		//font-size: 1.5em;
+		display: none;
 		img {
 			width: 200px;
 		}
@@ -53,6 +50,7 @@ body {
 	li {
 		font-size: 1.1em;
 		font-family: $accent-font;
+	    text-transform: uppercase;
 		line-height: $nav-height;
 		border-top: 1px solid $gray-lightest;
 	}
@@ -70,12 +68,29 @@ body {
 		float: left;
 		margin: 0 20px;
 		line-height: $nav-height;
-		font-family: $accent-font;
 		text-transform: uppercase;
 		font-size: 1.5em;
 	}
 }
-
+.topo-bg {
+	position: relative;
+	&:before {
+		opacity: .15;
+		background-image: url('/img/topo-bg-1.png');
+		background-repeat: repeat;
+		background-size: 250px 250px;
+		background-position: center center;
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		z-index: 1;
+		content: '';
+	}
+	.inner {
+		position: relative;
+		z-index: 2;
+	}
+}
 
 
 .hide {

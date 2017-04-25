@@ -9,6 +9,7 @@
 
 @import 'slide';
 @import 'video';
+@import 'browser-windows';
 
 @import 'hero';
 @import 'beta-signup';
@@ -45,9 +46,11 @@ img {
 // Headers
 h1, h2, h3, h4 {
   font-family: $accent-font;
+  text-transform: uppercase;
 }
 h1 {
-  font-size: 32px;
+  font-size: 55px;
+  text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
   line-height: 1.2em;
 }
 h2 {
