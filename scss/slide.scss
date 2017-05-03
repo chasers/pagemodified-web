@@ -1,10 +1,21 @@
 .slide {
-    overflow: hidden;
     .inner {
         max-width: $page-size;
+        overflow: hidden;
         margin: 0 auto;
         padding: 30px 20px;
     }
+    p {
+    	strong {
+    		font-weight: 700;
+    	}
+    }
+}
+.bright-bg {
+	background-color: $main-color;
+}
+.light-bg {
+	background-color: $light-background; 
 }
 
 // Responsive ------------------------------------------------------------------

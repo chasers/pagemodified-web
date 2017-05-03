@@ -1,7 +1,10 @@
 $body-background: #fff;
 $page-background: $body-background;
 
-$main-color: #1EBBED; //blue
+$brand-brown: #c9b39b;
+$brand-blue: #109cc8;//#1EBBED;
+
+$main-color: $brand-blue;
 
 $white: #fff;
 $gray-lightest: #f5f4f2;
@@ -10,7 +13,9 @@ $gray: #BDBEC0;
 $gray-dark: #5B5B5E;
 $black: #000;
 
-$font-family: Arial, 'Lucida Grande', sans-serif;
+$light-background: lighten($brand-brown,20);
+
+$font-family: 'Source Sans Pro', Arial, 'Lucida Grande', sans-serif;
 $accent-font: 'langdonregular', Arial, 'Lucida Grande', sans-serif;
 
 $font-color: $black;
