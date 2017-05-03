@@ -9,8 +9,7 @@
 		overflow: hidden;
 	}
 	li {
-		//width: 50%;
-		line-height: 40px;
+		line-height: 36px;
 		
 		font-size: 12px;
 		text-align: center;
@@ -20,7 +19,7 @@
 		background: $main-color;
 		color: $white;
 		border-radius: 20px;
-		margin-bottom: 6px;
+		margin-bottom: 8px;
 	}
 }
 
@@ -33,7 +32,7 @@
 		float: left;
 	}
 	span {
-		margin-right: 6px;
+		margin-right: 8px;
 	}
 }
 // End Tablet & Up
