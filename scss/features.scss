@@ -1,17 +1,30 @@
 .features {
+	h2 {
+		font-size: 50px;
+		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
+	}
 	ul {
 		overflow: hidden;
-		border-bottom: 1px solid $gray;
+		//border-bottom: 1px solid $gray;
 	}
 	li {
 		width: 50%;
 		float: left;
-		line-height: 45px;
-		border-top: 1px solid $gray;
+		line-height: 40px;
+		//border-top: 1px solid $gray;
 		
 		font-size: 12px;
+		font-weight: bold;
 		text-align: center;
-		background: $page-background;
+	}
+	span {
+		display: block;
+		background: $main-color;
+		color: $white;
+		border-radius: 20px;
+		margin: 0 6px 6px 0;
 	}
 }
 
