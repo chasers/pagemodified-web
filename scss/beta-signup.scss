@@ -1,12 +1,11 @@
+$field-height: 50px;
+$field-border: 2px;
+$field-radius: ($field-height/2 + $field-border);
+
 .beta-signup-bottom {
 	background: $main-color;
-
 }
 .beta-signup {
-	h2 {
-		//font-size: 30px;
-		//color: $white;
-	}
 	label {
 		display: none;
 	}
@@ -15,28 +14,29 @@
 	}
 	input[type="email"], button {
 		display: inline-block;
-		line-height: 50px;
+		line-height: $field-height;
 		padding: 0 20px;
-		border: none;
+		border: $field-border solid $main-color;
 	}
 	input[type="email"], button {
 		font-size: 18px;
 	}
 	input[type="email"] {
-		line-height: 48px;
-		min-width: 400px;
-		border: 1px solid $gray-light;
+		width: 240px;
 		border-right: 0;
+		border-radius: $field-radius 0 0 $field-radius;
 	}
 	button {
-		background: $gray-dark;
+		padding: 0 16px 0 12px;
+		background: $main-color;
+		border-radius: 0 $field-radius $field-radius 0;
 	}
 	p {
 		font-size: 12px;
-		margin: 0;
+		margin: 0 0 4px;
 	}
 	&.in-page {
-		padding: 40px 0;
+		padding: 50px 0 30px;
 		text-align: center;
 		h2 {
 			display: none;
@@ -49,10 +49,20 @@
 @media all and (min-width: 420px) {
 // Tablet & Up
 
+.beta-signup {
+	input[type="email"] {
+		width: 275px;
+	}
+}
 // End Tablet & Up
 }
 
 @media all and (min-width: 800px) {
 // Desktop & Up
 
+.beta-signup {
+	input[type="email"] {
+		width: 450px;
+	}
+}
 }

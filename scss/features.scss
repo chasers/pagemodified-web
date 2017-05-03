@@ -7,16 +7,12 @@
 	}
 	ul {
 		overflow: hidden;
-		//border-bottom: 1px solid $gray;
 	}
 	li {
-		width: 50%;
-		float: left;
+		//width: 50%;
 		line-height: 40px;
-		//border-top: 1px solid $gray;
 		
 		font-size: 12px;
-		font-weight: bold;
 		text-align: center;
 	}
 	span {
@@ -24,7 +20,7 @@
 		background: $main-color;
 		color: $white;
 		border-radius: 20px;
-		margin: 0 6px 6px 0;
+		margin-bottom: 6px;
 	}
 }
 
@@ -33,7 +29,11 @@
 // Tablet & Up
 .features {
 	li {
-		width: 25%;
+		width: 50%;
+		float: left;
+	}
+	span {
+		margin-right: 6px;
 	}
 }
 // End Tablet & Up
@@ -41,5 +41,9 @@
 
 @media all and (min-width: 800px) {
 // Desktop & Up
-
+.features {
+	li {
+		width: 25%;
+	}
+}
 }

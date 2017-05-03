@@ -1,7 +1,7 @@
 $background: #333;
 $background-accent: #41A9D9;
 $window: $gray-dark;
-$browser-border-size: 4px;
+$browser-border-size: 2px;
 
 .desktop {
 	background: rgba($window,.4);
@@ -26,7 +26,7 @@ $browser-border-size: 4px;
 			content: ' ';
 			border-radius: 50%;
 		    background: rgba($window,.4);
-		    border: 2px solid $window;
+		    border: $browser-border-size solid $window;
 		    position: absolute;
 		}
 		&:before {
@@ -44,7 +44,7 @@ $browser-border-size: 4px;
 
 .device-window {
   background: rgba($window,.4);
-  border: 4px solid $window;
+  border: $browser-border-size solid $window;
   position: relative;
   span {
     background: #000;

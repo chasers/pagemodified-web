@@ -1,15 +1,19 @@
 .hero {
 	.logo {
-		width: 150px;
+		width: 120px;
 		float: right;
+		margin-left: 20px;
 	}
 	.inner {
 		padding-bottom: 0;
 	}
+	h2 {
+		display: none;
+		margin-top: 20px;
+	}
 	a {
 		display: block;
 		margin: 30px auto 0;
-		//max-width: 800px;
 		border-radius: 10px 10px 0 0;
 		border-bottom: none;
 		&:hover {
@@ -33,11 +37,22 @@
 // Responsive ------------------------------------------------------------------
 @media all and (min-width: 420px) {
 // Tablet & Up
-
+.hero {
+	.logo {
+		width: 150px;
+	}
+}
 // End Tablet & Up
 }
 
 @media all and (min-width: 800px) {
 // Desktop & Up
-
+.hero {
+	.logo {
+		width: 200px;
+	}
+	h2 {
+		display: block;
+	}
+}
 }

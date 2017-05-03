@@ -1,15 +1,10 @@
 .benefits {
 	.item {
-		width: 50%;
-		float: left;
 		text-align: center;
 		div {
 			height: 230px;
-			//background: $white;
-			padding: 20px;
+			padding: 10px;
 			margin-bottom: 30px;
-			//margin: 10px;
-			//box-shadow: 0 0 12px rgba($black,.1);
 		}
 	}
 	h2, h3, i, p {
@@ -21,16 +16,11 @@
 	}
 	h3 {
 		font-size: 30px;
-		//color: $main-color;
-		//margin-bottom: 20px;
-
 	}
 	i {
-		//color: $main-color;
 		font-size: 60px;
 		display: block;
 		margin-bottom: 10px;
-		//text-shadow: -2px 1px 0px $page-background, -4px 2px 0px $gray-light;
 	}
 	p {
 		font-size: 14px;
@@ -43,7 +33,11 @@
 // Tablet & Up
 .benefits {
 	.item {
-		width: 33.33%;
+		width: 50%;
+		float: left;
+	}
+	h2 {
+		margin-top: 20px;
 	}
 }
 // End Tablet & Up
@@ -51,5 +45,13 @@
 
 @media all and (min-width: 800px) {
 // Desktop & Up
-
+.benefits {
+	.item {
+		width: 33.33%;
+		div {
+			height: 230px;
+			padding: 10px;
+		}
+	}
+}
 }

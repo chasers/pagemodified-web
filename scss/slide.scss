@@ -23,7 +23,7 @@
 // Tablet & Up
 .slide {
     .inner {
-        padding: 50px 30px;
+        //padding: 50px 20px;
     }
 }
 // End Tablet & Up
@@ -31,5 +31,9 @@
 
 @media all and (min-width: 800px) {
 // Desktop & Up
-
+.slide {
+    .inner {
+        padding: 50px 30px;
+    }
+}
 }
