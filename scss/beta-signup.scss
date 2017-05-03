@@ -1,5 +1,48 @@
+.beta-signup-bottom {
+	background: $main-color;
+
+}
 .beta-signup {
-	background-color: $main-color;
+	h2 {
+		//font-size: 30px;
+		//color: $white;
+	}
+	label {
+		display: none;
+	}
+	form {
+		overflow: hidden;
+	}
+	input[type="email"], button {
+		display: inline-block;
+		line-height: 50px;
+		padding: 0 20px;
+		border: none;
+	}
+	input[type="email"], button {
+		font-size: 18px;
+	}
+	input[type="email"] {
+		line-height: 48px;
+		min-width: 400px;
+		border: 1px solid $gray-light;
+		border-right: 0;
+	}
+	button {
+		background: $gray-dark;
+	}
+	p {
+		font-size: 12px;
+		margin: 0;
+	}
+	&.in-page {
+		padding: 40px 0;
+		text-align: center;
+		h2 {
+			display: none;
+		}
+
+	}
 }
 
 // Responsive ------------------------------------------------------------------
