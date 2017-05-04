@@ -9,17 +9,14 @@
 		overflow: hidden;
 	}
 	li {
-		line-height: 36px;
-		
-		font-size: 12px;
-		text-align: center;
+		line-height: 30px;
+		font-size: 14px;
 	}
 	span {
 		display: block;
-		background: $main-color;
-		color: $white;
 		border-radius: 20px;
 		margin-bottom: 8px;
+		text-shadow: 0 0 1px $white, 0 0 5px $white, 0 0 10px $white;
 	}
 }
 
@@ -41,6 +38,58 @@
 @media all and (min-width: 800px) {
 // Desktop & Up
 .features {
+	li {
+		width: 25%;
+	}
+}
+}
+
+
+
+
+.features-1 {
+	h2 {
+		font-size: 50px;
+		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
+	}
+	ul {
+		overflow: hidden;
+	}
+	li {
+		line-height: 36px;
+		
+		font-size: 12px;
+		text-align: center;
+	}
+	span {
+		display: block;
+		background: $main-color;
+		color: $white;
+		border-radius: 20px;
+		margin-bottom: 8px;
+	}
+}
+
+// Responsive ------------------------------------------------------------------
+@media all and (min-width: 420px) {
+// Tablet & Up
+.features-1 {
+	li {
+		width: 50%;
+		float: left;
+	}
+	span {
+		margin-right: 8px;
+	}
+}
+// End Tablet & Up
+}
+
+@media all and (min-width: 800px) {
+// Desktop & Up
+.features-1 {
 	li {
 		width: 25%;
 	}

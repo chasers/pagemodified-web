@@ -1,5 +1,13 @@
+{% if include.layout == 'video' %}
 <div class="video-ctr {{ include.layout }}">
 	<a class="desktop" rel="videoPlayerToggle" data-videoid="{{ include.videoid }}" href="#">
 	<span><img src="{{ site.baseurl }}/img/{{ include.image }}" alt="{{ include.title }}" /></span>
 	</a>
 </div>
+{% else %}
+<div class="video-ctr {{ include.layout }}">
+	<div class="desktop">
+	<span><img src="{{ site.baseurl }}/img/{{ include.image }}" alt="{{ include.title }}" /></span>
+	</div>
+</div>
+{% endif %}
