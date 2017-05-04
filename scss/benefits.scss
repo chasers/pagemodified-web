@@ -36,7 +36,7 @@
 		float: left;
 	}
 	h2 {
-		margin-top: 20px;
+		line-height: 160px;
 	}
 }
 // End Tablet & Up
@@ -47,6 +47,9 @@
 .benefits {
 	.item {
 		width: 33.33%;
+		h2 {
+			line-height: 205px;
+		}
 		div {
 			height: 205px;
 			padding: 10px;
