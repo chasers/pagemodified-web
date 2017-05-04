@@ -3,7 +3,16 @@ $field-border: 2px;
 $field-radius: ($field-height/2 + $field-border);
 
 .beta-signup-bottom {
-	background: $main-color;
+	background: $light-background;
+	text-align: center;
+	padding-bottom: 40px;
+	h2 {
+		display: none;
+	}
+	h1 {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
 }
 .beta-signup {
 	label {

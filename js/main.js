@@ -18,8 +18,12 @@ $(function(){
       scrollToAnchor(tag);
   });
   function scrollToAnchor(aid){
-      var aTag = $('#'+ aid +'');
-      $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+      var aTag = $('#'+ aid);
+      var aTagTop = aTag.offset().top,
+          aTagAddOffset = 60,
+          aTagOffset = aTagTop-aTagAddOffset;
+      //console.log('aTagTop:'+aTagTop+'aTagAddOffset:'+aTagAddOffset+'aTagOffset:'+aTagOffset);
+      $('html,body').animate({scrollTop: aTagOffset},'slow');
   }
 
   /*

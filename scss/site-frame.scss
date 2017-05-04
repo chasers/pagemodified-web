@@ -19,10 +19,9 @@ body {
 	.logo {
 		display: inline-block;
 		float: left;
-		margin: 8px 10px 0;
-		display: none;
+		margin: 1px 10px 0;
 		img {
-			width: 200px;
+			width: 100px;
 		}
 	}
 	.mobile-toggle {
@@ -56,20 +55,22 @@ body {
 	}
 }
 .footer {
-	background: $main-color;
-	color: #fff;
-	overflow: hidden;
-
+	//color: $white;
+	//overflow: hidden;
+	position: relative;
+	z-index: 2;
 	a {
-		color: #fff;
+		//color: $white;
 	}
 	.logo {
-		display: inline-block;
-		float: left;
-		margin: 0 20px;
-		line-height: $nav-height;
-		text-transform: uppercase;
-		font-size: 1.5em;
+		display: block;
+		width: 200px;
+		margin: -40px auto 0;
+	}
+	.copy {
+		font-size: 24px;
+		text-align: center;
+		padding: 40px 0;
 	}
 }
 .topo-bg {
