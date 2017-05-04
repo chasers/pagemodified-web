@@ -31,7 +31,7 @@ $field-radius: ($field-height/2 + $field-border);
 		font-size: 18px;
 	}
 	input[type="email"] {
-		width: 240px;
+		width: 190px;
 		border-right: 0;
 		border-radius: $field-radius 0 0 $field-radius;
 	}
@@ -45,7 +45,7 @@ $field-radius: ($field-height/2 + $field-border);
 		margin: 0 0 4px;
 	}
 	&.in-page {
-		padding: 50px 0 30px;
+		padding: 20px 0;
 		text-align: center;
 		h2 {
 			display: none;
@@ -55,12 +55,23 @@ $field-radius: ($field-height/2 + $field-border);
 }
 
 // Responsive ------------------------------------------------------------------
+@media all and (min-width: 340px) {
+.beta-signup {
+	input[type="email"] {
+		width: 240px;
+	}
+}
+}
+// Responsive ------------------------------------------------------------------
 @media all and (min-width: 420px) {
 // Tablet & Up
 
 .beta-signup {
 	input[type="email"] {
 		width: 275px;
+	}
+	&.in-page {
+		padding: 30px 0;
 	}
 }
 // End Tablet & Up
