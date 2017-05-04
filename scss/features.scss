@@ -7,16 +7,23 @@
 	}
 	ul {
 		overflow: hidden;
+		text-align: center;
 	}
 	li {
-		line-height: 30px;
+		line-height: 24px;
 		font-size: 14px;
+		display: inline-block;
 	}
 	span {
-		display: block;
+		display: inline-block;
 		border-radius: 20px;
 		margin-bottom: 8px;
 		text-shadow: 0 0 1px $white, 0 0 5px $white, 0 0 10px $white;
+	}
+	i {
+		color: $main-color;
+		margin-right: 4px;
+		display: inline-block;
 	}
 }
 
@@ -24,6 +31,9 @@
 @media all and (min-width: 420px) {
 // Tablet & Up
 .features {
+	ul {
+		text-align: left;
+	}
 	li {
 		width: 50%;
 		float: left;
