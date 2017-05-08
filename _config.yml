@@ -1,7 +1,7 @@
 highlighter: rouge
 github: [Repository metadata]
 
-baseurl: "https://valleyhosting.github.io/pagemodified_website"
+baseurl: "http://www.pagemodified.com"
 
 # Sass
 sass:
