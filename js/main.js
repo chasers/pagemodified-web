@@ -70,22 +70,44 @@ $(function(){
       3: 48,
       4: 96,
       5: 240
-    };
+    },
+    numberOfDomains = 0;
+
     if (priceType == 'monthly') {
+      // Update Text
+      $('[rel="price-qualifier"]').html('per month');
+      // Update pricing table & slider costs
       $.each( priceValuesMonthly, function( key, value ) {
         $('#priceLevel'+key+' strong').html('$'+value);
-        $('#priceLevel'+key+' span').html('per domain <br>per month');
+        $('#packageSlider'+key).attr('data-domain-price',value);
+        $('#packageSlider'+key+' .cost').html('$'+value);
+        numberOfDomains = $('#packageSlider'+key+' input[type="range"]').attr('data-domain-count');
+        updateSliderPrice(key,numberOfDomains);
       });
+      // Update total slider cost
+      updateTotalPrice();
+
     } else if (priceType == 'annual') {
+      // Update Text
+      $('[rel="price-qualifier"]').html('per year');
+      // Update pricing table & slider costs
       $.each( priceValuesAnnual, function( key, value ) {
         $('#priceLevel'+key+' strong').html('$'+value);
-        $('#priceLevel'+key+' span').html('per domain <br>per year');
+        $('#packageSlider'+key).attr('data-domain-price',value);
+        $('#packageSlider'+key+' .cost').html('$'+value);
+        numberOfDomains = $('#packageSlider'+key+' input[type="range"]').attr('data-domain-count');
+        updateSliderPrice(key,numberOfDomains);
       });
+      // Update total slider cost
+      updateTotalPrice();
+
     }
   }
+
+
   if (thisPage == 'pricingPage') {
     // Price Range Slider ------------------------------------------------------
-    $('input[type="range"]').val(1).rangeslider({
+    $('input[type="range"]').rangeslider({
       polyfill: false,
 
       // Callback function
@@ -101,60 +123,60 @@ $(function(){
         $(rangeLabels).each(function(index, value) {
           $rangeEl.find('.rangeslider__labels').append('<span class="rangeslider__labels__label">' + value + '</span>');
         })
-        var thisSliderID = this.$element.attr('id').replace('range-','');
-        estimatedPrice(thisSliderID,this.value);
+        // init Value
+        var labelIndex = (this.$element.attr('value'))-1,
+            labelValue = rangeLabels[labelIndex],
+            thisSliderID = this.$element.attr('id').replace('range-','');
+        this.$element.attr('data-domain-count',labelValue);
+        updateSliderPrice(thisSliderID,labelValue);
       },
 
       // Callback function
       onSlide: function(position, value) {
-        //var $handle = this.$range.find('.rangeslider__handle__value');
-        //$handle.text(this.value);
-        var thisSliderID = this.$element.attr('id').replace('range-','');
-        estimatedPrice(thisSliderID,this.value);
       },
 
       // Callback function
-      onSlideEnd: function(position, value) {}
-    });
-    function estimatedPrice(type,value) {
-      var priceType = type,
-          unitPrice = 0,
-          subPrice = 0,
-          totalPrice = 0,
-          otherPrice = 0,
-          countValues = [];
+      onSlideEnd: function(position, value) {
 
-      if (priceType == 'business') {
-        unitPrice = 10;
-        countValues = {
-          1: 5,
-          2: 10,
-          3: 20,
-          4: 50,
-          5: 100
-        };
-        otherPrice = parseInt($('#slider-price-enterprise').val());
-      } else if (priceType == 'enterprise') {
-        unitPrice = 50;
-        countValues = {
-          1: 1,
-          2: 5,
-          3: 10,
-          4: 15,
-          5: 20
-        };
-        otherPrice = parseInt($('#slider-price-business').val());
+        // get range index labels 
+        var rangeLabels = this.$element.attr('labels');
+        rangeLabels = rangeLabels.split(', ');
+
+        var labelIndex = this.value-1,
+            labelValue = rangeLabels[labelIndex],
+            thisSliderID = this.$element.attr('id').replace('range-','');
+
+        this.$element.attr('data-domain-count',labelValue);
+        updateSliderPrice(thisSliderID,labelValue);
+
       }
+    });
 
-      subPrice = countValues[value] * unitPrice;
-      totalPrice = subPrice + otherPrice;
-
-      $('#slider-price-'+priceType).val(subPrice);
-      $('#estimatedCost').text('$'+totalPrice);
-    }
   }
 
+    function updateSliderPrice(priceType,numberOfDomains) {
+      var unitPrice = 0,
+          subPrice = 0,
+          totalPrice = 0;
 
+      // Get Unit Price
+      unitPrice = $('#packageSlider'+priceType).attr('data-domain-price');
+
+      // Update Price for this level
+      subPrice = numberOfDomains * unitPrice;
+      $('#slider-price-'+priceType).val(subPrice);
+
+      updateTotalPrice();
+    }
+
+    function updateTotalPrice() {
+      var totalPrice = 0;
+      // Add all slider prices together
+      $('[rel="slider-price"]').each(function(index, value) {
+        totalPrice += parseInt($(this).val());
+      });
+      $('#estimatedCost').text('$'+totalPrice);
+    }
 
 
 

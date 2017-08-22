@@ -1,113 +1,24 @@
-{% if include.layout == "two" %}
-<div class="slide pricing-packages">
-	<div class="inner">
-		<div class="pricing-table row">
-			{% include pricing-table-column.html plan-level="0" slug="titles" %}
-			{% include pricing-table-column.html plan-level="1" title="Free" slug="free" desc="You have a website and want to keep tabs on it easily." %}
-			{% include pricing-table-column.html plan-level="2" title="Personal" slug="personal" desc="" %}
-			{% include pricing-table-column.html plan-level="3" title="Pro" slug="pro" desc="" %}
-			{% include pricing-table-column.html plan-level="4" title="Business" slug="business" desc="You make money online and your website is vital to your business!" %}
-			{% include pricing-table-column.html plan-level="5" title="Enterprise" slug="enterprise" desc="You regularly crawl 100s of thousands or millions of pages for multiple domains." %}
-		</div>
-		<div class="toggle-row row">
-			<div class="column md-two-thirds plan-alert">
-				<strong>Interested in a custom plan and pricing? Contact us, we scale nicely :)</strong>
+<div class="pricing-table row">
+	{% include pricing-table-column.html plan-level="0" slug="titles" %}
+	{% include pricing-table-column.html plan-level="1" title="Free" slug="free" desc="You have a website and want to keep tabs on it easily." %}
+	{% include pricing-table-column.html plan-level="2" title="Personal" slug="personal" desc="" %}
+	{% include pricing-table-column.html plan-level="3" title="Pro" slug="pro" desc="" %}
+	{% include pricing-table-column.html plan-level="4" title="Business" slug="business" desc="You make money online and your website is vital to your business!" %}
+	{% include pricing-table-column.html plan-level="5" title="Enterprise" slug="enterprise" desc="You regularly crawl 100s of thousands or millions of pages for multiple domains." %}
+</div>
+<div class="toggle-row row">
+	<div class="column md-two-thirds plan-alert">
+		<strong>Interested in a custom plan and pricing? Contact us, we scale nicely :)</strong>
+	</div>
+	<div class="column md-one-third annual-toggle-container">
+		Pay for a year up front and save 25%!<br>
+		<div class="annual-toggle">
+			<div class="title">Monthly</div>
+			<div class="toggle-input">
+				<input type="checkbox" id="annualPriceSwitch" />
+				<label for="annualPriceSwitch">Toggle</label>
 			</div>
-			<div class="column md-one-third annual-toggle-container">
-				Pay for a year up front and save 25%!<br>
-				<div class="annual-toggle">
-					<div class="title">Monthly</div>
-					<div class="toggle-input">
-						<input type="checkbox" id="annualPriceSwitch" />
-						<label for="annualPriceSwitch">Toggle</label>
-					</div>
-					<div class="title">Annually</div>
-				</div>
-			</div>
+			<div class="title">Annually</div>
 		</div>
 	</div>
 </div>
-{% elsif include.layout == "one" %}
-<div class="slide pricing-packages-one">
-	<div class="inner">
-		<div class="header-row row">
-			<div class="free column md-one-third">
-				<div class="icon"><i class="fa fa-hand-peace-o"></i></div>
-				<h3>Free</h3>
-				<p>You have a website and want to keep tabs on it easily.</p>
-			</div>
-			<div class="business column md-one-third">
-				<div class="icon"><i class="fa fa-building"></i></div>
-				<h3>Business</h3>
-				<p>You make money online and your website is vital to your business!</p>
-			</div>
-			<div class="enterprise column md-one-third">
-				<div class="icon">
-					<i class="fa fa-building one"></i>
-					<i class="fa fa-building extra two"></i>
-					<i class="fa fa-building extra three"></i>
-				</div>
-				<h3>Enterprise</h3>
-				<p>You regularly crawl 100s of thousands or millions of pages for multiple domains.</p>
-			</div>
-		</div>
-		<div class="item-row row">
-			<div class="column md-one-third">
-				<ul>
-					<li>Up to 100 pages per domain</li>
-					<li>Weekly full website crawls</li>
-					<li>Uptime monitoring & down alerts</li>
-					<li>Compare crawls with diffs</li>
-					<li>1 months of crawl archives</li>
-					<li class="inactive">Robots.txt monitoring & change alerts</li>
-					<li class="inactive">Full HTML website backups</li>
-					<li class="inactive">Unlimited manual re-crawls</li>
-					<li class="price"><strong>$0.00</strong>per domain</li>
-				</ul>
-			</div>
-			<div class="column md-one-third">
-				<ul>
-					<li>Up to 25,000 pages per domain</li>
-					<li>Weekly full website crawls</li>
-					<li>Uptime monitoring & down alerts</li>
-					<li>Compare crawls with diffs</li>
-					<li>6 months of crawl archives</li>
-					<li>Robots.txt monitoring & change alerts</li>
-					<li class="inactive">Full HTML website backups</li>
-					<li>Unlimited manual re-crawls</li>
-					<li class="price" id="priceLevel1"><strong>&nbsp;</strong><span>&nbsp;</span></li>
-				</ul>
-			</div>
-			<div class="column md-one-third">
-				<ul>
-					<li>Up to 250,000 pages per domain</li>
-					<li>Weekly full website crawls</li>
-					<li>Uptime monitoring & down alerts</li>
-					<li>Compare crawls with diffs</li>
-					<li>Unlimited crawl archives</li>
-					<li>Robots.txt monitoring & change alerts</li>
-					<li class="inactive">Full HTML website backups</li>
-					<li>Unlimited manual re-crawls</li>
-					<li class="price" id="priceLevel2"><strong>&nbsp;</strong><span>&nbsp;</span></li>
-				</ul>
-			</div>
-		</div>
-		<div class="toggle-row row">
-			<div class="column md-two-thirds plan-alert">
-				<strong>Interested in a custom plan and pricing? Contact us, we scale nicely :)</strong>
-			</div>
-			<div class="column md-one-third annual-toggle-container">
-				Pay for a year up front and save 25%!<br>
-				<div class="annual-toggle">
-					<div class="title">Monthly</div>
-					<div class="toggle-input">
-						<input type="checkbox" id="annualPriceSwitch" />
-						<label for="annualPriceSwitch">Toggle</label>
-					</div>
-					<div class="title">Annually</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-{% endif %}

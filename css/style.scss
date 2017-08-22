@@ -21,6 +21,7 @@ $baseurl: '{{ site.baseurl }}';
 @import 'features';
 
 @import 'pricing';
+@import 'pricing-table';
 
 * {
   -webkit-box-sizing: border-box;

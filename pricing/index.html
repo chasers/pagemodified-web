@@ -18,20 +18,24 @@ rangeslider: true
 	</div>
 </div>
 
-{% include pricing-table.html layout="two" %}
+<div class="slide pricing-packages">
+	<div class="inner">
+	{% include pricing-table.html %}
+	</div>
+</div>
 
 <div class="slide estimate-pricing topo-bg">
 	<div class="inner">
 		<h2 class="headline large center">Estimate Your Bill</h2>
 		<div class="sliders-container row">
-			<div class="column md-one-half first">
-			{% include price-slider.html id="business" title="Business Domains" cost="+ $10 per month" %}
+			<div class="column md-one-half estimated-cost">
+				<span id="estimatedCost">$--</span> <span rel="price-qualifier">&nbsp;</span>
 			</div>
-			<div class="column md-one-half last">
-			{% include price-slider.html id="enterprise" title="Enterprise Domains" cost="+ $50 per year" %}
-			</div>
-			<div class="column estimated-cost">
-				<span id="estimatedCost">$100</span> per month
+			<div class="column md-one-half">
+				{% include price-slider.html slug="personal" title="Personal" level="2" %}
+				{% include price-slider.html slug="pro" title="Pro" level="3" %}
+				{% include price-slider.html slug="business" title="Business" level="4" %}
+				{% include price-slider.html slug="enterprise" title="Enterprise" level="5" %}
 			</div>
 		</div>
 	</div>

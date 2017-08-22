@@ -1,20 +1,18 @@
-{% if include.id == 'business' %}
-{% assign countList = "0, 5, 10, 20, 50, 100" %}
+{% if include.slug == 'free' or include.slug == 'personal' or include.slug == 'pro' %}
+{% assign countList = "0, 5, 10, 50, 100" %}
+{% assign countArray = countList | split: "," %}
+{% elsif include.slug == 'business' %}
+{% assign countList = "0, 5, 10, 20, 50" %}
 {% assign countArray = countList | split: "," %}
 {% else %}
-{% assign countList = "0, 1, 5, 10, 15, 20" %}
+{% assign countList = "0, 1, 5, 10, 20" %}
 {% assign countArray = countList | split: "," %}
 {% endif %}
-<div class="price-slider" id="slider{{ include.id }}">
-	<h3 class="title">{{ include.title }}</h3>
-	<span class="cost">{{ include.cost }}</span>
+<div class="price-slider" id="packageSlider{{ include.level }}" rel="package-slider-ctr">
+	<h3 class="title">{{ include.title }} Domains</h3>
+	<div class="cost-ctr"><span class="cost">&nbsp;</span> per domain <span rel="price-qualifier">&nbsp;</span></div>
 	<div class="range-container">
-		<input type="range" min="1" max="5" name="cost-estimate" id="range-{{ include.id }}" labels="{{ countList }}" />
-		<input type="hidden" name="slider-price-{{ include.id }}" id="slider-price-{{ include.id }}" />
+		<input type="range" min="1" max="5" value="1" name="cost-estimate" id="range-{{ include.level }}" labels="{{ countList }}" />
+		<input type="hidden" rel="slider-price" name="slider-price-{{ include.level }}" id="slider-price-{{ include.level }}" />
 	</div>
 </div>
-{% comment %}
-		<ul class="range-labels">{% for item in countArray %}
-			<li id="item-{{ item }}" data-count="{{ item }}">{{ item }}</li>{% endfor %}
-		</ul>
-{% endcomment %}
