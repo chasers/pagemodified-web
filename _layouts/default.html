@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- google font -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700" rel="stylesheet">
 </head>
-<body class="{{ page.slug }}" id="homePage">
+<body class="page-{{ page.slug }}" id="{{page.slug}}Page">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7MSTBG"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -94,7 +94,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 
 <script src="{{ site.baseurl }}/js/main.js"></script>
-
-
+{% if page.rangeslider %}
+<script src="{{ site.baseurl }}/js/vendor/rangeslider.min.js"></script>
+{% endif %}
 </body>
 </html>

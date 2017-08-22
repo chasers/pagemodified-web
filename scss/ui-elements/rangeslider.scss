@@ -1,0 +1,72 @@
+// Range Slider
+$range-color-active: $main-color;
+$range-color-inactive: $gray;
+
+$range-line-height: 4px;
+$range-handle-size: 12px;
+$range-label-height: 30px;
+
+.rangeslider {
+  position: relative;
+  margin: $range-handle-size/2 0 ($range-label-height - $range-line-height);
+  height: $range-line-height;
+  width: 100%;
+  background-color: $range-color-inactive;
+  
+  &__handle {
+    box-sizing: border-box;
+    width: $range-handle-size;
+    height: $range-handle-size;
+    border-radius: 100%;
+    background-color: $range-color-active;
+    touch-action: pan-y;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    top: -($range-handle-size/2) + ($range-line-height/2);
+  }
+  
+  &__fill {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+    background-color: $range-color-active;
+  }
+  
+  &__labels {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    height: $range-label-height;
+    
+    &__label {
+      font-size: 14px;
+      position: relative;
+      color: $range-color-inactive;
+      width: 40px;
+      padding-top: $range-label-height - 15px; //estimate for font height
+      text-align: center;
+      
+      &:first-child { 
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+      &:nth-child(2) {
+        margin-left: -8px;
+        margin-right: 8px;
+      }
+      &:nth-child(4) {
+        margin-left: 8px;
+        margin-right: -8px;
+      }
+      //&:first-child { transform: translateX(-48%) }
+      //&:last-child { transform: translateX(48%) }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{% if include.id == 'business' %}
+{% assign countList = "0, 5, 10, 20, 50, 100" %}
+{% assign countArray = countList | split: "," %}
+{% else %}
+{% assign countList = "0, 1, 5, 10, 15, 20" %}
+{% assign countArray = countList | split: "," %}
+{% endif %}
+<div class="price-slider" id="slider{{ include.id }}">
+	<h3 class="title">{{ include.title }}</h3>
+	<span class="cost">{{ include.cost }}</span>
+	<div class="range-container">
+		<input type="range" min="1" max="5" name="cost-estimate" id="range-{{ include.id }}" labels="{{ countList }}" />
+		<input type="hidden" name="slider-price-{{ include.id }}" id="slider-price-{{ include.id }}" />
+	</div>
+</div>
+{% comment %}
+		<ul class="range-labels">{% for item in countArray %}
+			<li id="item-{{ item }}" data-count="{{ item }}">{{ item }}</li>{% endfor %}
+		</ul>
+{% endcomment %}

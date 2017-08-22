@@ -1,0 +1,100 @@
+// Columns -------------------------------------------------------
+.row {
+  overflow: hidden;
+}
+.column {
+  float: left;
+  width: 100%;
+}
+.sm-one-half {
+  width: 50%;
+}
+.sm-one-third {
+  width: 33.33%;
+}
+.sm-two-thirds {
+  width: 66.66%;
+}
+.sm-one-forth {
+  width: 25%;
+}
+.sm-one-fifth {
+  width: 20%;
+}
+.sm-two-fifths {
+  width: 40%;
+}
+.sm-three-fifths {
+  width: 60%;
+}
+.sm-four-fifths {
+  width: 80%;
+}
+.sm-one-sixth {
+  width: 16.6%;
+}
+
+@media only screen and (min-width: 768px) {
+
+.md-one-half {
+  width: 50%;
+}
+.md-one-third {
+  width: 33.33%;
+}
+.md-two-thirds {
+  width: 66.66%;
+}
+.md-one-forth {
+  width: 25%;
+}
+.md-one-fifth {
+  width: 20%;
+}
+.md-two-fifths {
+  width: 40%;
+}
+.md-three-fifths {
+  width: 60%;
+}
+.md-four-fifths {
+  width: 80%;
+}
+.md-one-sixth {
+  width: 16.6%;
+}
+
+}//min-width:768px
+
+@media only screen and (min-width: 950px) {
+
+.lg-one-half {
+  width: 50%;
+}
+.lg-one-third {
+  width: 33.33%;
+}
+.lg-two-thirds {
+  width: 66.66%;
+}
+.lg-one-forth {
+  width: 25%;
+}
+.lg-one-fifth {
+  width: 20%;
+}
+.lg-two-fifths {
+  width: 40%;
+}
+.lg-three-fifths {
+  width: 60%;
+}
+.lg-four-fifths {
+  width: 80%;
+}
+.lg-one-sixth {
+  width: 16.6%;
+}
+
+}//min-width: 950px
+

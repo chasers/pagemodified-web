@@ -1,0 +1,11 @@
+// Headers & Text Styles
+.headline {
+  &.large {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
+  }
+  &.center {
+    text-align: center;
+  }
+}

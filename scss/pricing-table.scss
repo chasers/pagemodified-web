@@ -1,0 +1,56 @@
+// Packages Table
+.pricing-table {
+	background: $white;
+	.header {
+		height: 100px;
+		text-align: center;
+		.icon {
+			line-height: 60px;
+			margin: 0 auto;
+			position: relative;
+			font-size: 40px;
+			i {
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+	.packages {
+		width: 15%;
+	}
+	.titles {
+		width: 25%;
+	}
+	li {
+		border-top: 1px solid $border-color;
+		margin: 0 10px;
+		line-height: 40px;
+		font-size: 14px;
+		text-align: center;
+	}
+	.fa-check {
+		color: $brand-green;
+	}
+	.inactive {
+		color: lighten($font-color, 80);
+	}
+	.price {
+		padding: 20px 0 10px;
+		strong {
+			font-size: 40px;
+			display: block;
+		}
+		span {
+			display: block;
+			margin-top: 8px;
+			font-size: 10px;
+			line-height: 12px;
+		}
+	}
+	.level-titles {
+		li {
+			text-align: left;
+		}
+	}
+
+}

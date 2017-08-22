@@ -1,0 +1,58 @@
+---
+layout: default
+title: Pricing
+slug: pricing
+path: ../
+
+meta-title: Total Website Monitoring Pricing
+meta-description: With PageModified, you can have Free, Business and Enterprise domains together in a single account. Simply sign up for free to get started.
+
+rangeslider: true
+---
+
+<div class="slide page-header topo-bg">
+	<div class="inner">
+		<h1>Total Website Monitoring Pricing</h1>
+		<p>We charge a flat price per domain. You can have Free, Business and Enterprise domains together in a single account. Simply sign up for free to get started. No credit card information required up front.</p>
+		<a class="button large" href="https://app.pagemodified.com/registrations/new">Use Page Modified Free</a>
+	</div>
+</div>
+
+{% include pricing-table.html layout="two" %}
+
+<div class="slide estimate-pricing topo-bg">
+	<div class="inner">
+		<h2 class="headline large center">Estimate Your Bill</h2>
+		<div class="sliders-container row">
+			<div class="column md-one-half first">
+			{% include price-slider.html id="business" title="Business Domains" cost="+ $10 per month" %}
+			</div>
+			<div class="column md-one-half last">
+			{% include price-slider.html id="enterprise" title="Enterprise Domains" cost="+ $50 per year" %}
+			</div>
+			<div class="column estimated-cost">
+				<span id="estimatedCost">$100</span> per month
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="slide pricing-features">
+	<div class="inner">
+		<h2>Unique Features for Website Monitoring</h2>
+		<div class="feature-extended row">
+			<div class="column md-one-half">
+				{% include feature-item-extended.html icon="bolt" title="Full Crawl + Crawl Diff" description="We do a full crawl of every page on your website, and let you easily compare all that data week over week. This makes it incredibly easy to see exactly what changed on your website and when." %}
+			</div>
+			<div class="column md-one-half">
+				{% include feature-item-extended.html icon="bolt" title="Priced per Website" description="No need to worry about how many pages get added to your site or calculate total pages across websites. Easily understand your monthly or yearly bill based on how many websites are in your account." %}
+			</div>
+			<div class="column md-one-half">
+				{% include feature-item-extended.html icon="bolt" title="Weekly Website Backups" description="Making sure you have backups of your website is very important. If anything happens you can always breath easy knowing Page Modified has full copies of your site archived. It's like your own personal archive.org." %}
+			</div>
+			<div class="column md-one-half">
+				{% include feature-item-extended.html icon="bolt" title="Uptime Alerts Included" description="Don't pay for an additional uptime monitoring service. With each website in your account you get access to our down alerts. We will ping your website every 30 seconds and make sure it's available!" %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,9 +1,9 @@
 .features {
 	h2 {
-		font-size: 50px;
-		margin-bottom: 20px;
-		text-align: center;
-		text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
+		//font-size: 50px;
+		//margin-bottom: 20px;
+		//text-align: center;
+		//text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
 	}
 	ul {
 		overflow: hidden;
@@ -26,7 +26,9 @@
 		display: inline-block;
 	}
 }
+.features-extended {
 
+}
 // Responsive ------------------------------------------------------------------
 @media all and (min-width: 420px) {
 // Tablet & Up
