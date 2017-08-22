@@ -1,5 +1,6 @@
 // Range Slider
 $range-color-active: $main-color;
+$range-color-secondary: $brand-green;
 $range-color-inactive: $gray;
 
 $range-line-height: 4px;
@@ -67,6 +68,11 @@ $range-label-height: 30px;
       }
       //&:first-child { transform: translateX(-48%) }
       //&:last-child { transform: translateX(48%) }
+    }
+  }
+  &.secondary {
+    .rangeslider__handle, .rangeslider__fill {
+      background-color: $range-color-secondary;
     }
   }
 }

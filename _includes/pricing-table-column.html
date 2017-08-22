@@ -1,48 +1,49 @@
-{% if include.slug == "free" %}
-	{% assign price-level = "1" %}
-	{% assign pages = "100" %}
-	{% assign crawlers = "1" %}
-	{% assign archives = "1 month" %}
-	{% assign robots = "n" %}
-	{% assign backups = "n" %}
-	{% assign recrawl = "n" %}
-	{% assign api = "n" %}
-{% elsif include.slug == "personal" %}
-	{% assign price-level = "2" %}
-	{% assign pages = "1,000" %}
-	{% assign crawlers = "5" %}
-	{% assign archives = "3 months" %}
-	{% assign robots = "y" %}
-	{% assign backups = "n" %}
-	{% assign recrawl = "y" %}
-	{% assign api = "n" %}
-{% elsif include.slug == "pro" %}
-	{% assign price-level = "3" %}
-	{% assign pages = "5,000" %}
-	{% assign crawlers = "10" %}
-	{% assign archives = "6 months" %}
-	{% assign robots = "y" %}
-	{% assign backups = "n" %}
-	{% assign recrawl = "y" %}
-	{% assign api = "y" %}
-{% elsif include.slug == "business" %}
-	{% assign price-level = "4" %}
-	{% assign pages = "25,000" %}
-	{% assign crawlers = "20" %}
-	{% assign archives = "12 months" %}
-	{% assign robots = "y" %}
-	{% assign backups = "n" %}
-	{% assign recrawl = "y" %}
-	{% assign api = "y" %}
-{% elsif include.slug == "enterprise" %}
-	{% assign price-level = "5" %}
-	{% assign pages = "100,000" %}
-	{% assign crawlers = "50" %}
-	{% assign archives = "24 months" %}
-	{% assign robots = "y" %}
-	{% assign backups = "y" %}
-	{% assign recrawl = "y" %}
-	{% assign api = "y" %}
+{% if include.slug == 'free' %}
+	{% assign price-level = '1' %}
+	{% assign icon-name = '' %}
+	{% assign pages = '100' %}
+	{% assign crawlers = '1' %}
+	{% assign archives = '1 month' %}
+	{% assign robots = 'n' %}
+	{% assign backups = 'n' %}
+	{% assign recrawl = 'n' %}
+	{% assign api = 'n' %}
+{% elsif include.slug == 'personal' %}
+	{% assign price-level = '2' %}
+	{% assign pages = '1,000' %}
+	{% assign crawlers = '5' %}
+	{% assign archives = '3 months' %}
+	{% assign robots = 'y' %}
+	{% assign backups = 'n' %}
+	{% assign recrawl = 'y' %}
+	{% assign api = 'n' %}
+{% elsif include.slug == 'pro' %}
+	{% assign price-level = '3' %}
+	{% assign pages = '5,000' %}
+	{% assign crawlers = '10' %}
+	{% assign archives = '6 months' %}
+	{% assign robots = 'y' %}
+	{% assign backups = 'n' %}
+	{% assign recrawl = 'y' %}
+	{% assign api = 'y' %}
+{% elsif include.slug == 'business' %}
+	{% assign price-level = '4' %}
+	{% assign pages = '25,000' %}
+	{% assign crawlers = '20' %}
+	{% assign archives = '12 months' %}
+	{% assign robots = 'y' %}
+	{% assign backups = 'n' %}
+	{% assign recrawl = 'y' %}
+	{% assign api = 'y' %}
+{% elsif include.slug == 'enterprise' %}
+	{% assign price-level = '5' %}
+	{% assign pages = '100,000' %}
+	{% assign crawlers = '50' %}
+	{% assign archives = '24 months' %}
+	{% assign robots = 'y' %}
+	{% assign backups = 'y' %}
+	{% assign recrawl = 'y' %}
+	{% assign api = 'y' %}
 {% endif %}
 
 {% if price-level %}

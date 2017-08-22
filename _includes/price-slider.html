@@ -9,8 +9,8 @@
 {% assign countArray = countList | split: "," %}
 {% endif %}
 <div class="price-slider" id="packageSlider{{ include.level }}" rel="package-slider-ctr">
-	<h3 class="title">{{ include.title }} Domains</h3>
-	<div class="cost-ctr"><span class="cost">&nbsp;</span> per domain <span rel="price-qualifier">&nbsp;</span></div>
+	<h3 class="title">{{ include.title }}</h3>
+	<div class="cost-ctr"><span class="cost">&nbsp;</span><em> per domain <span rel="price-qualifier">&nbsp;</span></em></div>
 	<div class="range-container">
 		<input type="range" min="1" max="5" value="1" name="cost-estimate" id="range-{{ include.level }}" labels="{{ countList }}" />
 		<input type="hidden" rel="slider-price" name="slider-price-{{ include.level }}" id="slider-price-{{ include.level }}" />

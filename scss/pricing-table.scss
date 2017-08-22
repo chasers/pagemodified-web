@@ -1,9 +1,12 @@
 // Packages Table
 .pricing-table {
-	background: $white;
+	border: 4px solid $border-color;
+	background: $page-background;
+	border-radius: $border-radius;
 	.header {
-		height: 100px;
+		height: 120px;
 		text-align: center;
+		padding-top: 20px;
 		.icon {
 			line-height: 60px;
 			margin: 0 auto;
@@ -12,6 +15,7 @@
 			i {
 				position: relative;
 				z-index: 2;
+				color: $main-color;
 			}
 		}
 	}
@@ -23,7 +27,7 @@
 	}
 	li {
 		border-top: 1px solid $border-color;
-		margin: 0 10px;
+		padding: 0 10px;
 		line-height: 40px;
 		font-size: 14px;
 		text-align: center;
