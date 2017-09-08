@@ -27,8 +27,41 @@
 	}
 }
 .features-extended {
-	i {
-		font-size: 50px;
+	text-align: center;
+	.item {
+		padding: 20px 30px;
+	}
+	.icon {
+		font-size: 40px;
+		margin: 0 auto 20px;
+		position: relative;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+	    i {
+			//color: $white;
+	    	text-shadow: -1px 1px 0px $light-background, -2px 2px 0px #BDBEC0;
+	    }
+		&:before {
+			content: '';
+			display: block;
+			border-radius: 50%;
+			width: 94px;
+			height: 94px;
+			border: 3px solid $white;
+			background: $light-background;
+			box-shadow: 0 4px 10px rgba($black,.1);
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			margin: auto;
+			z-index: -1;
+
+		}
+	}
+	p {
+		font-size: 14px;
 	}
 }
 // Responsive ------------------------------------------------------------------
