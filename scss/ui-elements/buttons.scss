@@ -28,16 +28,24 @@
   &.block {
     //display: block;
   }
+  &.small {
+    font-size: 18px;
+    line-height: 36px;
+    padding: 2px 16px 0;
+  }
   &.large {
     font-size: 24px;
     line-height: 60px;
+  }
+  &.square {
+    border-radius: 0;
   }
 }
 
 
 // Toggle Slide
-$toggle-size: 30px;
-$toggle-space: 4px; // also update - input:checked + label:after
+$toggle-size: 40px;
+$toggle-space: 2px; // also update - input:checked + label:after
 
 .toggle-input {
   input[type=checkbox] {
@@ -74,11 +82,25 @@ $toggle-space: 4px; // also update - input:checked + label:after
   }
 
   input:checked + label:after {
-    left: calc(100% - 4px); //for some reason the variable for togglespace doesnt work here.
+    left: calc(100% - 2px); //for some reason the variable for togglespace doesnt work here.
     transform: translateX(-100%);
   }
 
   label:active:after {
     width: ($toggle-size*2) - ($toggle-size/8);
+  }
+  &.dark-bg {
+    label {
+      background: $page-background;
+    }
+    label:after {
+      background: $main-color;
+    }
+    input:checked + label {
+      background: $page-background;
+    }
+    input:checked + label:after {
+      background: $brand-green;
+    }
   }
 }

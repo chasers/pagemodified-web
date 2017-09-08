@@ -20,17 +20,28 @@ rangeslider: true
 
 <div class="slide pricing-packages">
 	<div class="inner">
-	{% include pricing-table.html %}
-	</div>
-</div>
-
-<div class="slide estimate-pricing topo-bg">
-	<div class="inner">
-		<div class="sliders-container row">
+		{% include pricing-table.html %}
+		<div class="toggle-row row">
+			<div class="column md-one-third annual-toggle-container">
+				Pay for a year up front and save 20%!<br>
+				<div class="annual-toggle">
+					<div class="title">Monthly</div>
+					<div class="toggle-input dark-bg">
+						<input type="checkbox" id="annualPriceSwitch" />
+						<label for="annualPriceSwitch">Toggle</label>
+					</div>
+					<div class="title">Annually</div>
+				</div>
+			</div>
+			<div class="column md-two-thirds custom-price"><p>Interested in a custom plan and pricing? <a href="#">Contact us</a>, we scale nicely :)</p></div>
+		</div>
+		<div class="estimate-pricing row">
 			<div class="column md-one-half estimated-cost">
 				<h2 class="headline large">Estimate Your Bill</h2>
 				<p><strong>We charge a flat price per domain.</strong> You can have Free, Business and Enterprise domains together in a single account. Use these sliders to estimate your bill.</p>
-				<span id="estimatedCost">$--</span> <span rel="price-qualifier">&nbsp;</span>
+				<p><span id="estimatedCost">$--</span> <span rel="price-qualifier">&nbsp;</span></p>
+				<br><br>
+				<p>Interested in a custom plan and pricing? <a href="#">Contact us</a>, we scale nicely :)</p>
 			</div>
 			<div class="column md-one-half">
 				<div class="estimated-sliders-ctr">
@@ -46,19 +57,19 @@ rangeslider: true
 
 <div class="slide pricing-features">
 	<div class="inner">
-		<h2>Unique Features for Website Monitoring</h2>
-		<div class="feature-extended row">
+		<h2 class="headline large center">Unique Features for Website Monitoring</h2>
+		<div class="features-extended row">
 			<div class="column md-one-half">
-				{% include feature-item-extended.html icon="bolt" title="Full Crawl + Crawl Diff" description="We do a full crawl of every page on your website, and let you easily compare all that data week over week. This makes it incredibly easy to see exactly what changed on your website and when." %}
+				{% include feature-item-extended.html icon="code-fork" title="Full Crawl + Crawl Diff" description="We do a full crawl of every page on your website, and let you easily compare all that data week over week. This makes it incredibly easy to see exactly what changed on your website and when." %}
 			</div>
 			<div class="column md-one-half">
-				{% include feature-item-extended.html icon="bolt" title="Priced per Website" description="No need to worry about how many pages get added to your site or calculate total pages across websites. Easily understand your monthly or yearly bill based on how many websites are in your account." %}
+				{% include feature-item-extended.html icon="th" title="Priced per Website" description="No need to worry about how many pages get added to your site or calculate total pages across websites. Easily understand your monthly or yearly bill based on how many websites are in your account." %}<!--window-restore bar-chart sitemap area-chart -->
 			</div>
 			<div class="column md-one-half">
-				{% include feature-item-extended.html icon="bolt" title="Weekly Website Backups" description="Making sure you have backups of your website is very important. If anything happens you can always breath easy knowing Page Modified has full copies of your site archived. It's like your own personal archive.org." %}
+				{% include feature-item-extended.html icon="lock" title="Weekly Website Backups" description="Making sure you have backups of your website is very important. If anything happens you can always breath easy knowing Page Modified has full copies of your site archived. It's like your own personal archive.org." %}
 			</div>
 			<div class="column md-one-half">
-				{% include feature-item-extended.html icon="bolt" title="Uptime Alerts Included" description="Don't pay for an additional uptime monitoring service. With each website in your account you get access to our down alerts. We will ping your website every 30 seconds and make sure it's available!" %}
+				{% include feature-item-extended.html icon="bell-o" title="Uptime Alerts Included" description="Don't pay for an additional uptime monitoring service. With each website in your account you get access to our down alerts. We will ping your website every 30 seconds and make sure it's available!" %}
 			</div>
 		</div>
 	</div>

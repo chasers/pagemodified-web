@@ -1,6 +1,6 @@
 {% if include.slug == 'free' %}
 	{% assign price-level = '1' %}
-	{% assign icon-name = '' %}
+	{% assign icon-name = 'hand-peace-o' %}
 	{% assign pages = '100' %}
 	{% assign crawlers = '1' %}
 	{% assign archives = '1 month' %}
@@ -10,6 +10,7 @@
 	{% assign api = 'n' %}
 {% elsif include.slug == 'personal' %}
 	{% assign price-level = '2' %}
+	{% assign icon-name = 'home' %}
 	{% assign pages = '1,000' %}
 	{% assign crawlers = '5' %}
 	{% assign archives = '3 months' %}
@@ -19,6 +20,7 @@
 	{% assign api = 'n' %}
 {% elsif include.slug == 'pro' %}
 	{% assign price-level = '3' %}
+	{% assign icon-name = 'id-badge' %}
 	{% assign pages = '5,000' %}
 	{% assign crawlers = '10' %}
 	{% assign archives = '6 months' %}
@@ -28,6 +30,7 @@
 	{% assign api = 'y' %}
 {% elsif include.slug == 'business' %}
 	{% assign price-level = '4' %}
+	{% assign icon-name = 'building' %}
 	{% assign pages = '25,000' %}
 	{% assign crawlers = '20' %}
 	{% assign archives = '12 months' %}
@@ -37,6 +40,7 @@
 	{% assign api = 'y' %}
 {% elsif include.slug == 'enterprise' %}
 	{% assign price-level = '5' %}
+	{% assign icon-name = 'cube' %}
 	{% assign pages = '100,000' %}
 	{% assign crawlers = '50' %}
 	{% assign archives = '24 months' %}
@@ -47,11 +51,10 @@
 {% endif %}
 
 {% if price-level %}
-<div class="column packages level-{{ include.slug }}">
+<div class="column packages level-{{ price-level }}">
 	<div class="header">
-		<div class="icon"><i class="fa fa-hand-peace-o"></i></div>
 		<h3>{{ include.title }}</h3>
-		<!--p>{{ include.desc }}</p-->
+		<p>{{ include.desc }}</p>
 	</div>
 	<ul>
 		<li>Up to {{ pages }}</li>
@@ -65,13 +68,13 @@
 		{% if recrawl == 'y' %}<li><i class="fa fa-check"></i></li>{% else %}<li class="inactive"><i class="fa fa-close"></i></li>{% endif %}
 		{% if api == 'y' %}<li><i class="fa fa-check"></i></li>{% else %}<li class="inactive"><i class="fa fa-close"></i></li>{% endif %}
 		<li><i class="fa fa-check"></i></li>
-		<li class="price" id="priceLevel{{ price-level }}"><strong>&nbsp;</strong><span class="subtext">per domain <span rel="price-qualifier">&nbsp;</span></span></li>
+		<li class="price" id="priceLevel{{ price-level }}"><strong>&nbsp;</strong><span class="subtext">per domain <span rel="price-qualifier">&nbsp;</span></span><!--a href="#" class="button square small">Let's Go</a--></li>
 	</ul>
 </div>
 {% else %}
-<div class="column titles level-{{ include.slug }}">
+<div class="column titles">
 	<div class="header">
-		&nbsp;
+		<img class="pm-icon" src="{{ site.baseurl }}/img/pagemodified-icon-outline-500.png" alt="PageModified" />
 	</div>
 	<ul>
 		<li>Pages per Domain</li>
@@ -85,7 +88,7 @@
 		<li>Unlimited manual re-crawls</li>
 		<li>API Access</li>
 		<li>Integrations</li>
-		<li class="price"><strong>&nbsp;</strong><span>&nbsp;</span></li>
+		<li class="price infotext"><p>Interested in a custom plan and pricing? <a href="#">Contact us</a>, we scale nicely :)</p><!--strong>&nbsp;</strong><span>&nbsp;</span--></li>
 	</ul>
 </div>
 {% endif %}

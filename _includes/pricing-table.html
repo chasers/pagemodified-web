@@ -1,24 +1,10 @@
-<div class="pricing-table row">
+<div class="pricing-table secondary row">
+	{% include mountain-scene.html %}
+
 	{% include pricing-table-column.html plan-level="0" slug="titles" %}
 	{% include pricing-table-column.html plan-level="1" title="Free" slug="free" desc="You have a website and want to keep tabs on it easily." %}
-	{% include pricing-table-column.html plan-level="2" title="Personal" slug="personal" desc="" %}
-	{% include pricing-table-column.html plan-level="3" title="Pro" slug="pro" desc="" %}
-	{% include pricing-table-column.html plan-level="4" title="Business" slug="business" desc="You make money online and your website is vital to your business!" %}
-	{% include pricing-table-column.html plan-level="5" title="Enterprise" slug="enterprise" desc="You regularly crawl 100s of thousands or millions of pages for multiple domains." %}
-</div>
-<div class="toggle-row row">
-	<div class="column md-two-thirds plan-alert">
-		<strong>Interested in a custom plan and pricing? Contact us, we scale nicely :)</strong>
-	</div>
-	<div class="column md-one-third annual-toggle-container">
-		Pay for a year up front and save 25%!<br>
-		<div class="annual-toggle">
-			<div class="title">Monthly</div>
-			<div class="toggle-input">
-				<input type="checkbox" id="annualPriceSwitch" />
-				<label for="annualPriceSwitch">Toggle</label>
-			</div>
-			<div class="title">Annually</div>
-		</div>
-	</div>
+	{% include pricing-table-column.html plan-level="2" title="Personal" slug="personal" desc="You have a website and want to keep tabs on it easily." %}
+	{% include pricing-table-column.html plan-level="3" title="Pro" slug="pro" desc="You have a website and want to keep tabs on it easily." %}
+	{% include pricing-table-column.html plan-level="4" title="Business" slug="business" desc="You make money online & your site is vital to your business!" %}
+	{% include pricing-table-column.html plan-level="5" title="Enterprise" slug="enterprise" desc="You  crawl 1000s or millions of pages for multiple domains." %}
 </div>

@@ -1,22 +1,41 @@
 // Pricig Page
+.page-pricing {
+	.page-header .inner {
+		padding-bottom: 90px;
+	}
+}
 .pricing-packages {
 	position: relative;
+	margin-top: -80px;
+	z-index: 2;
 	&:before {
 		content: '';
 		background: $main-color;
-		height: 400px;
+		//height: 400px;
 		z-index: -1;
 		position: absolute;
-		top: 0;
+		top: 80px; bottom: 0;
 		left: 0; right: 0;
 	}
-	.pricing-table {
+	&.secondary {
+		&:before {
+			background: $brand-green;
+		}
 	}
+}
+.pricing-table,
+.estimate-pricing {
+	background: $page-background;
+	border-radius: $border-radius;
+	box-shadow: 0 0 20px rgba($black,.2);
 }
 .toggle-row {
 	margin-top: 20px;
-	.plan-alert {
-
+	margin-bottom: 20px;
+	color: $white;
+	a {
+		color: $white;
+		font-weight: bold;
 	}
 	.annual-toggle {
 		overflow: hidden;
@@ -29,20 +48,21 @@
 			line-height: 30px;
 		}
 	}
+	.custom-price {
+		text-align: right;
+
+	}
 }
 .estimate-pricing {
+	padding: 40px;
 	.estimated-cost {
-		//text-align: center;
-		margin: 40px 0;
 		span {
 			font-size: 40px;
 		}
 	}
 	.estimated-sliders-ctr {
-		border: 4px solid $border-color;
-		background: $page-background;
-		border-radius: $border-radius;
-		padding: 20px;
+		border-left: 1px solid $border-color;
+		padding-left: 20px;
 	}
 }
 // Slider styled in range slider

@@ -1,0 +1,43 @@
+.mountain-scene {
+	.mountains {
+		opacity:0.5;
+		path {
+			clip-path:url(#SVGID_2_);
+			fill: $gray-light;
+		}
+	}
+	.the-line {
+		fill:none;
+		stroke: $gray;
+		stroke-width:2;
+		stroke-linecap:round;
+		stroke-miterlimit:10;
+		stroke-dasharray:0.1,5;
+
+		animation: dash 20s linear infinite;
+	}
+	.dots {
+
+	}
+	.dot, .times {
+		fill: $main-color;
+	}
+	.flag-pole{
+		fill: $gray-dark;
+	}
+	.flag-banner{
+		fill: $main-color;
+	}
+	.last-mountain {
+		transform: translate(0, 20px);
+	}
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}

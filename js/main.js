@@ -66,20 +66,20 @@ $(function(){
     },
     priceValuesAnnual = {
       1: 0,
-      2: 29,
-      3: 48,
-      4: 96,
-      5: 240
+      2: 2.4,
+      3: 4,
+      4: 8,
+      5: 20
     },
     priceValues = [],
     numberOfDomains = 0,
-    qualifierText = '';
+    qualifierText = 'per month';
 
     if (priceType == 'monthly') {
-      qualifierText = 'per month';
+      //qualifierText = 'per month';
       priceValues = priceValuesMonthly;
     } else if (priceType == 'annual') {
-      qualifierText = 'per year';
+      //qualifierText = 'per year';
       priceValues = priceValuesAnnual;
     }
     // Update pricing table & slider costs
@@ -92,8 +92,10 @@ $(function(){
     });
     // Update Price Qualifier Text
     $('[rel="price-qualifier"]').html(qualifierText);
-    // Coloring on Sliders
+    // Coloring on slider
+    $('.pricing-table').toggleClass('secondary');
     $('.rangeslider').toggleClass('secondary');
+
     // Update total cost for all sliders
     updateTotalPrice();
   }

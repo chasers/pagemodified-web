@@ -1,22 +1,19 @@
 // Packages Table
 .pricing-table {
-	border: 4px solid $border-color;
-	background: $page-background;
-	border-radius: $border-radius;
+	position: relative;
 	.header {
-		height: 120px;
+		height: 200px;
 		text-align: center;
-		padding-top: 20px;
-		.icon {
-			line-height: 60px;
-			margin: 0 auto;
+		padding-top: 105px;
+		h3 {
+			text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
 			position: relative;
-			font-size: 40px;
-			i {
-				position: relative;
-				z-index: 2;
-				color: $main-color;
-			}
+			z-index: 5;
+		}
+		p {
+			font-size: 12px;
+			line-height: 14px;
+			padding: 0 10px;
 		}
 	}
 	.packages {
@@ -24,6 +21,9 @@
 	}
 	.titles {
 		width: 25%;
+		.header {
+			padding-top: 0;
+		}
 	}
 	li {
 		border-top: 1px solid $border-color;
@@ -42,11 +42,13 @@
 		padding: 20px 0 10px;
 		strong {
 			font-size: 40px;
+			font-weight: bold;
 			display: block;
 		}
 		.subtext {
 			display: block;
 			margin-top: 8px;
+			margin-bottom: 16px;
 			font-size: 10px;
 			line-height: 12px;
 		}
@@ -54,6 +56,27 @@
 	.level-titles {
 		li {
 			text-align: left;
+		}
+	}
+
+	.mountain-scene {
+		position: absolute;
+		top: 20px;
+		left: 0; right: 0;
+	}
+	.pm-icon {
+	    padding-top: 37px;
+		max-width: 140px;
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		z-index: 5;
+	}
+	&.secondary {
+		.price {
+			strong {
+				color: $brand-green;
+			}
 		}
 	}
 
