@@ -1,4 +1,12 @@
+.mountain-scene-ctr {
+    position: relative;
+    height: 0;
+
+}
 .mountain-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
 	.mountains {
 		opacity:0.5;
 		path {
