@@ -19,6 +19,8 @@
 	.packages {
 		display: none;
 		width: 50%;
+		position: relative;
+		z-index: 2;
 	}
 	.titles {
 		width: 50%;
@@ -60,12 +62,12 @@
 			text-align: left;
 		}
 	}
-
 	.mountain-scene-ctr {
 		display: none;
 		position: absolute;
 		top: 20px;
 		left: 0; right: 0;
+		z-index: 1;
 	}
 	.pm-icon {
 	    padding-top: 5px;
