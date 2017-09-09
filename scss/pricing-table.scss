@@ -2,9 +2,9 @@
 .pricing-table {
 	position: relative;
 	.header {
-		height: 200px;
 		text-align: center;
-		padding-top: 105px;
+		height: 86px;
+		padding-top: 10px;
 		h3 {
 			text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
 			position: relative;
@@ -17,19 +17,21 @@
 		}
 	}
 	.packages {
-		width: 15%;
+		display: none;
+		width: 50%;
 	}
 	.titles {
-		width: 25%;
+		width: 50%;
 		.header {
 			padding-top: 0;
 		}
 	}
-	li {
+	.column li {
+		padding: 0 4px;
+		font-size: 12px;
+		line-height: 30px;
+
 		border-top: 1px solid $border-color;
-		padding: 0 10px;
-		line-height: 40px;
-		font-size: 14px;
 		text-align: center;
 	}
 	.fa-check {
@@ -38,7 +40,7 @@
 	.inactive {
 		color: lighten($font-color, 80);
 	}
-	.price {
+	.column .price {
 		padding: 20px 0 10px;
 		strong {
 			font-size: 40px;
@@ -60,13 +62,14 @@
 	}
 
 	.mountain-scene {
+		display: none;
 		position: absolute;
 		top: 20px;
 		left: 0; right: 0;
 	}
 	.pm-icon {
-	    padding-top: 37px;
-		max-width: 140px;
+	    padding-top: 5px;
+		max-width: 77px;
 		display: block;
 		margin: 0 auto;
 		position: relative;
@@ -81,9 +84,38 @@
 	}
 
 }
+
 // Responsive ------------------------------------------------------------------
-@media all and (min-width: 420px) {
+@media all and (min-width: 760px) {
 // Tablet & Up
+.pricing-table {
+	.header {
+		height: 200px;
+		padding-top: 105px;
+	}
+	.dropdown-ctr {
+		display: none;
+	}
+	.packages {
+		display: block;
+		width: 15%;
+	}
+	.titles {
+		width: 25%;
+	}
+	.column li {
+		padding: 0 10px;
+		font-size: 14px;
+		line-height: 40px;
+	}
+	.mountain-scene {
+		display: block;
+	}
+	.pm-icon {
+		padding-top: 37px;
+		max-width: 140px;
+	}
+}
 
 // End Tablet & Up
 }

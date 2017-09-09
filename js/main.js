@@ -42,6 +42,65 @@ $(function(){
     $('#videoPlayerContainer').hide('fast');
     $('#videoPlayerContainer iframe').attr('src','');
   });
+  // Mobile Pricing Dropdown ------------------------------------------------------------------
+
+  function DropDown(el) {
+    this.dd = el;
+    this.placeholder = this.dd.children('span');
+    this.opts = this.dd.find('ul.dropdown > li');
+    this.val = '';
+    this.index = -1;
+    this.initEvents();
+  }
+  DropDown.prototype = {
+    initEvents : function() {
+      var obj = this;
+
+      obj.dd.on('click', function(event){
+        $(this).toggleClass('active');
+        return false;
+      });
+
+      obj.opts.on('click',function(){
+        var opt = $(this);
+        obj.val = opt.text();
+        obj.index = opt.index();
+        obj.level = opt.index()+1;
+        obj.placeholder.text('Level: ' + obj.val);
+        $('.packages').hide();
+        $('.level-'+obj.level).show();
+      });
+    },
+    getValue : function() {
+      return this.val;
+    },
+    getIndex : function() {
+      return this.index;
+    }
+  }
+
+  function pricingToggle() {
+    var windowWidth = $(window).width();
+    if (windowWidth < 760) {
+      $('#pricingToggle').show();
+      $('#pricingToggle').trigger('click');
+      $('#pricingToggle .initial').trigger('click');
+    } else {
+      $('#pricingToggle').hide();
+      $('.packages').show();
+    }
+  }
+
+  var dd = new DropDown( $('#pricingToggle') );
+  pricingToggle();
+
+  // close dropdown if user clicks on document.
+  $(document).click(function() {
+    $('#pricingToggle').removeClass('active');
+  });
+  $(window).resize(function() {
+    pricingToggle();
+  });
 
   // Monthly/Annual Pricing Toggle ------------------------------------------------------------
   changePrice('monthly');
@@ -95,6 +154,7 @@ $(function(){
     // Coloring on slider
     $('.pricing-table').toggleClass('secondary');
     $('.rangeslider').toggleClass('secondary');
+    $('.cost').toggleClass('secondary');
 
     // Update total cost for all sliders
     updateTotalPrice();

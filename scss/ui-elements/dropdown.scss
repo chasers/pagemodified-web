@@ -1,0 +1,71 @@
+.dropdown-ctr {
+    position: relative; /* Enable absolute positioning for children and pseudo elements */
+    width: 100%;
+    padding: 10px 10px 9px;
+    margin: 0 auto;
+
+    background: $gray-dark;
+    color: $white;
+    outline: none;
+    cursor: pointer;
+    font-family: $accent-font;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        margin-top: -6px;
+        border-width: 6px 0 6px 6px;
+        border-style: solid;
+        border-color: transparent #fff;    
+    }
+    .dropdown {
+        /* Size & position */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        /* Styles */
+        background: $white;
+        list-style: none;
+
+        /* Hiding */
+        opacity: 0;
+        pointer-events: none;
+        li {
+            border-bottom: 1px solid $border-color;
+            a {
+                display: block;
+                text-decoration: none;
+                color: $gray-dark;
+                padding: 10px;
+            }
+            &:hover a {
+                background: $light-background;
+            }
+        }
+    }
+    &.active {
+        /* Active state */
+        .dropdown {
+            opacity: 1;
+            z-index: 1000;
+            pointer-events: auto;
+        }
+        &:after {
+            border-color: $white transparent;
+            border-width: 6px 6px 0 6px ;
+            margin-top: -3px;
+        }
+        &.active {
+          background: $main-color;
+        }
+
+    }
+}

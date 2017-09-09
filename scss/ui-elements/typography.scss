@@ -1,11 +1,22 @@
 // Headers & Text Styles
 .headline {
   &.large {
-    font-size: 50px;
+    font-size: 36px;
+    line-height: 1em;
     margin-bottom: 20px;
     text-shadow: -1px 1px 0px $page-background, -2px 2px 0px $gray;
   }
   &.center {
     text-align: center;
   }
+}
+// Responsive ------------------------------------------------------------------
+@media all and (min-width: 760px) {
+
+.headline {
+  &.large {
+    font-size: 50px;
+  }
+}
+
 }

@@ -8,6 +8,10 @@
 	position: relative;
 	margin-top: -80px;
 	z-index: 2;
+	.inner {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
 	&:before {
 		content: '';
 		background: $main-color;
@@ -30,6 +34,9 @@
 	box-shadow: 0 0 20px rgba($black,.2);
 }
 .toggle-row {
+	max-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	color: $white;
@@ -40,6 +47,7 @@
 	.annual-toggle {
 		overflow: hidden;
 		margin-top: 20px;
+		margin-bottom: 20px;
 		div {
 			float: left;
 			margin-right: 10px;
@@ -48,21 +56,30 @@
 			line-height: 30px;
 		}
 	}
-	.custom-price {
-		text-align: right;
-
-	}
+	p {margin-bottom: 0;}
 }
 .estimate-pricing {
-	padding: 40px;
+	padding: 20px;
 	.estimated-cost {
+		.cost {
+			display: block;
+			background: $main-color;
+			color: $white;
+			text-align: center;
+
+			padding: 20px 10px;
+			&.secondary {
+				background: $brand-green;
+			}
+		}
 		span {
-			font-size: 40px;
+			font-size: 30px;
 		}
 	}
 	.estimated-sliders-ctr {
 		border-left: 1px solid $border-color;
-		padding-left: 20px;
+		padding: 20px;
+		//padding-right: 0;
 	}
 }
 // Slider styled in range slider
@@ -84,9 +101,26 @@
 	}
 }
 // Responsive ------------------------------------------------------------------
-@media all and (min-width: 420px) {
+@media all and (min-width: 760px) {
 // Tablet & Up
-
+.pricing-packages {
+	.inner {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.toggle-row {
+	max-width: 1000px;
+	.annual-toggle {
+		margin-bottom: 0;
+	}
+	.custom-price {
+		text-align: right;
+	}
+}
+.estimate-pricing {
+	padding: 40px;
+}
 // End Tablet & Up
 }
 

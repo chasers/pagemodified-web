@@ -3,16 +3,22 @@
 		width: 120px;
 		float: right;
 		margin-left: 20px;
+		display: none;
 	}
 	.inner {
 		padding-bottom: 0;
+	}
+	h1 {
+		font-size: 36px;
+		line-height: 1em;
+		margin-bottom: 10px;
 	}
 	h2 {
 		display: none;
 		margin-top: 20px;
 	}
 	p {
-		font-size: 20px;
+		font-size: 17px;
 	    max-width: 600px;
 	    margin: 0;
 	    line-height: 24px;
@@ -47,7 +53,15 @@
 // Tablet & Up
 .hero {
 	.logo {
-		width: 150px;
+		width: 100px;
+		display: block;
+	}
+	h1 {
+		font-size: 40px;
+		line-height: 1.3em;
+	}
+	p {
+		font-size: 20px;
 	}
 }
 // End Tablet & Up

@@ -1,6 +1,15 @@
 <div class="pricing-table secondary row">
 	{% include mountain-scene.html %}
-
+	<div id="pricingToggle" class="dropdown-ctr">
+		<span>Level</span>
+		<ul class="dropdown">
+			<li class="initial"><a href="#">Free</a></li>
+			<li><a href="#">Personal</a></li>
+			<li><a href="#">Pro</a></li>
+			<li><a href="#">Business</a></li>
+			<li><a href="#">Enterprise</a></li>
+		</ul>
+	</div>
 	{% include pricing-table-column.html plan-level="0" slug="titles" %}
 	{% include pricing-table-column.html plan-level="1" title="Free" slug="free" desc="Monitor your side projects quickly." %}
 	{% include pricing-table-column.html plan-level="2" title="Personal" slug="personal" desc="You have a website and want to keep tabs on it easily." %}

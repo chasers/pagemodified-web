@@ -19,9 +19,9 @@ body {
 	.logo {
 		display: inline-block;
 		float: left;
-		margin: 4px 10px 0;
+		margin: 4px 6px 0;
 		img {
-			width: 220px;
+			width: 210px;
 		}
 	}
 	.mobile-toggle {
@@ -95,7 +95,7 @@ body {
 .page-header {
 	text-align: center;
 	p {
-		font-size: 20px;
+		font-size: 17px;
 		max-width: 680px;
 		margin: 0 auto 30px;
 	}
@@ -112,7 +112,11 @@ body {
 // Responsive
 @media all and (min-width: 420px) {
 // Tablet & Up
-
+.page-header {
+	p {
+		font-size: 20px;
+	}
+}
 // End Tablet & Up
 }
 
