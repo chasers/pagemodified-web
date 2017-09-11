@@ -68,7 +68,7 @@ $(function(){
         obj.level = opt.index()+1;
         obj.placeholder.text('Level: ' + obj.val);
         $('.packages').hide();
-        $('.level-'+obj.level).show();
+        $('.level-'+obj.level).fadeIn();
       });
     },
     getValue : function() {
@@ -91,6 +91,7 @@ $(function(){
     }
   }
 
+  // add class="initial" to li in dropdown to make it select on load
   var dd = new DropDown( $('#pricingToggle') );
   pricingToggle();
 

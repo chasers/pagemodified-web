@@ -1,6 +1,6 @@
 .dropdown-ctr {
     position: relative; /* Enable absolute positioning for children and pseudo elements */
-    width: 100%;
+    //width: 100%;
     padding: 10px 10px 9px;
     margin: 0 auto;
 
@@ -34,6 +34,8 @@
         /* Styles */
         background: $white;
         list-style: none;
+        border: 1px solid #ccc;
+        border-top: 0;
 
         /* Hiding */
         opacity: 0;
@@ -45,6 +47,9 @@
                 text-decoration: none;
                 color: $gray-dark;
                 padding: 10px;
+            }
+            &:last-child {
+                border-bottom: none;
             }
             &:hover a {
                 background: $light-background;
