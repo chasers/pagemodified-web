@@ -1,0 +1,56 @@
+.one-line-form {
+  position: relative;
+  label {
+    display: none;
+  }
+  input[type="email"], button {
+    vertical-align: top;
+    display: inline-block;
+    line-height: $field-height;
+    height: $field-height;
+    padding: 0 20px;
+    border: $field-border solid $main-color;
+  }
+  input[type="email"], button {
+    font-size: 18px;
+  }
+  input[type="email"] {
+    width: 190px;
+    border-right: 0;
+    border-radius: $field-radius 0 0 $field-radius;
+  }
+  button {
+    padding: 0 16px 0 12px;
+    background: $main-color;
+    border-radius: 0 $field-radius $field-radius 0;
+  }
+
+}
+// Responsive ------------------------------------------------------------------
+@media all and (min-width: 340px) {
+.one-line-form {
+  input[type="email"] {
+    width: 240px;
+  }
+}
+}
+// Responsive ------------------------------------------------------------------
+@media all and (min-width: 420px) {
+// Tablet & Up
+
+.one-line-form {
+  input[type="email"] {
+    width: 275px;
+  }
+}
+// End Tablet & Up
+}
+@media all and (min-width: 800px) {
+// Desktop & Up
+
+.one-line-form {
+  input[type="email"] {
+    width: 450px;
+  }
+}
+}

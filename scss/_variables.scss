@@ -33,6 +33,8 @@ $desktop-side-space: 20px;
 $mobile-side-space: 30px;
 
 $field-height: 50px;
+$field-border: 2px;
+$field-radius: ($field-height/2 + $field-border);
 
 @font-face {
     font-family: 'langdonregular';

@@ -1,7 +1,3 @@
-$field-height: 50px;
-$field-border: 2px;
-$field-radius: ($field-height/2 + $field-border);
-
 .beta-signup-bottom {
 	background: $light-background;
 	text-align: center;
@@ -16,11 +12,11 @@ $field-radius: ($field-height/2 + $field-border);
 }
 .beta-signup {
 	label {
-		display: none;
+		//display: none;
 	}
 	form {
 		overflow: hidden;
-	}
+	}/*
 	input[type="email"], button {
 		display: inline-block;
 		line-height: $field-height;
@@ -35,14 +31,12 @@ $field-radius: ($field-height/2 + $field-border);
 		width: 190px;
 		border-right: 0;
 		border-radius: $field-radius 0 0 $field-radius;
-	    position: relative;
-	    top: -2px;
 	}
 	button {
 		padding: 0 16px 0 12px;
 		background: $main-color;
 		border-radius: 0 $field-radius $field-radius 0;
-	}
+	}*/
 	p {
 		font-size: 12px;
 		margin: 0 0 4px;
@@ -61,7 +55,7 @@ $field-radius: ($field-height/2 + $field-border);
 @media all and (min-width: 340px) {
 .beta-signup {
 	input[type="email"] {
-		width: 240px;
+		//width: 240px;
 	}
 }
 }
@@ -71,7 +65,7 @@ $field-radius: ($field-height/2 + $field-border);
 
 .beta-signup {
 	input[type="email"] {
-		width: 275px;
+		//width: 275px;
 	}
 	&.in-page {
 		padding: 30px 0;
@@ -85,7 +79,7 @@ $field-radius: ($field-height/2 + $field-border);
 
 .beta-signup {
 	input[type="email"] {
-		width: 450px;
+		//width: 450px;
 	}
 }
 }
