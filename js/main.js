@@ -42,8 +42,8 @@ $(function(){
     $('#videoPlayerContainer').hide('fast');
     $('#videoPlayerContainer iframe').attr('src','');
   });
-  // Mobile Pricing Dropdown ------------------------------------------------------------------
 
+  // Mobile Pricing Dropdown ------------------------------------------------------------------
   function DropDown(el) {
     this.dd = el;
     this.placeholder = this.dd.children('span');
@@ -78,30 +78,42 @@ $(function(){
       return this.index;
     }
   }
+  // add class="initial" to li in dropdown to make it select on load
+  var dd = new DropDown($('#pricingToggle'));
+  // close dropdown if user clicks on document.
+  $(document).click(function() {
+    //$('#pricingToggle').removeClass('active');
+  });
 
-  function pricingToggle() {
-    var windowWidth = $(window).width();
-    if (windowWidth < 760) {
+  // show/hide mobile toggle
+  var breakpoint = {};
+  breakpoint.refreshValue = function () {
+    this.value = window.getComputedStyle(
+      document.querySelector('body'), ':before'
+    ).getPropertyValue('content').replace(/\"/g, '');
+  };
+  $(window).resize(function () {
+    var existingBreakpoint = $('.breakpoint').html();
+    breakpoint.refreshValue();
+    if (existingBreakpoint != breakpoint.value) {
+      $('.breakpoint').html(breakpoint.value);
+      pricingToggle(breakpoint.value);
+    }
+  }).resize();
+  function pricingToggle(layout) {
+    if (layout == 'mobile') {
       $('#pricingToggle').show();
       $('#pricingToggle').trigger('click');
       $('#pricingToggle .initial').trigger('click');
+      $('#pricingToggle').addClass('active');
     } else {
+      $('#pricingToggle').removeClass('active');
       $('#pricingToggle').hide();
       $('.packages').show();
     }
   }
 
-  // add class="initial" to li in dropdown to make it select on load
-  var dd = new DropDown( $('#pricingToggle') );
-  pricingToggle();
 
-  // close dropdown if user clicks on document.
-  $(document).click(function() {
-    //$('#pricingToggle').removeClass('active');
-  });
-  $(window).resize(function() {
-    pricingToggle();
-  });
 
   // Monthly/Annual Pricing Toggle ------------------------------------------------------------
   changePrice('monthly');
