@@ -97,7 +97,7 @@ $(function(){
 
   // close dropdown if user clicks on document.
   $(document).click(function() {
-    $('#pricingToggle').removeClass('active');
+    //$('#pricingToggle').removeClass('active');
   });
   $(window).resize(function() {
     pricingToggle();
