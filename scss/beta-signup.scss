@@ -35,6 +35,8 @@ $field-radius: ($field-height/2 + $field-border);
 		width: 190px;
 		border-right: 0;
 		border-radius: $field-radius 0 0 $field-radius;
+	    position: relative;
+	    top: -2px;
 	}
 	button {
 		padding: 0 16px 0 12px;
