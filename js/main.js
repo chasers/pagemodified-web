@@ -24,8 +24,14 @@ $(function(){
         // ADD THIS - hijack the link on pageload - then use scrollToAnchor
         document.location = link;
       }
-
   });
+
+  // *only* if we have anchor on the url
+  if(window.location.hash) {
+    var thisTag = window.location.hash,
+        thisTag = thisTag.replace('#','');
+        scrollToAnchor(thisTag);
+  }
   function scrollToAnchor(aid){
       var aTag = $('#'+ aid);
       var aTagTop = aTag.offset().top,
