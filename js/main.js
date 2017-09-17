@@ -15,8 +15,16 @@ $(function(){
    */
   $('[rel="scrollTo"]').click(function() {
       event.preventDefault();
-      var tag = $(this).attr('data-scrollTo');
-      scrollToAnchor(tag);
+      var tag = $(this).attr('data-scrollTo'),
+          link =  $(this).attr('href');
+
+      if (thisPage == 'homePage') {
+        scrollToAnchor(tag);
+      } else {
+        // ADD THIS - hijack the link on pageload - then use scrollToAnchor
+        document.location = link;
+      }
+
   });
   function scrollToAnchor(aid){
       var aTag = $('#'+ aid);
@@ -24,6 +32,7 @@ $(function(){
           aTagAddOffset = 60,
           aTagOffset = aTagTop-aTagAddOffset;
       //console.log('aTagTop:'+aTagTop+'aTagAddOffset:'+aTagAddOffset+'aTagOffset:'+aTagOffset);
+      $('.nav').removeClass('nav-open');
       $('html,body').animate({scrollTop: aTagOffset},'slow');
   }
 

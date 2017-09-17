@@ -15,6 +15,7 @@ body {
 	z-index: 100;
 	a {
 		color: $main-color;
+		display: block;
 	}
 	.logo {
 		display: inline-block;
@@ -40,11 +41,13 @@ body {
 		}
 	}
 	ul {
-		display: block;
 		clear: both;
 		text-align: center;
 		display: none;
 		@include transition(all 1s);
+		&.nav-open {
+			display: block;
+		}
 	}
 	li {
 		font-size: 1.1em;
