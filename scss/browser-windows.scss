@@ -11,7 +11,7 @@ $browser-border-size: 2px;
 	&:before {
 		content: '';
 		display: block;
-		height: 30px;
+		height: 20px;
 		border-bottom: $browser-border-size solid $window;
 	}
 	img {
@@ -22,7 +22,7 @@ $browser-border-size: 2px;
 		&:after, &:before {
 			width: 7px;
 			height: 7px;
-			top: 10px;
+			top: 5px;
 			content: ' ';
 			border-radius: 50%;
 		    background: rgba($window,.4);
