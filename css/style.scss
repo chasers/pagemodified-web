@@ -25,6 +25,7 @@ $baseurl: '{{ site.baseurl }}';
 @import 'pricing';
 @import 'pricing-table';
 @import 'mountain-scene';
+@import 'hosted-chrome';
 
 * {
   -webkit-box-sizing: border-box;
@@ -78,6 +79,9 @@ h4 {
   font-size: 18px;
   margin-bottom: 1em;
   color: $main-color;
+}
+.pull-right {
+  float: right;
 }
 
 // Responsive
