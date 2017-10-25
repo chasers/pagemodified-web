@@ -13,12 +13,14 @@
 
 #wikipedia-html {
     max-width: 250px;
+    padding-right: 5px;
 }
 
 #responsive-example {
     max-width: 200px;
     transform: rotateX(55deg) rotateY(0) rotateZ(-25deg) translate(-33px, -29px);
     box-shadow: -12px 18px 5px rgba(0,0,0,.25);
+    margin-left: 50px;
 }
 
 .hosted-chrome-content {
@@ -36,8 +38,13 @@
     align-items: center;
     min-height: 225px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;   
 }
+
+.box:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
 
 .cta-box {
 	display: flex;
@@ -66,8 +73,18 @@
 	padding-right: 10px;
 }
 
-@media screen and (max-width: 799px){
-    .hide-on-mobile {
-        display: none;
+@media screen and (max-width: 550px){
+    .box {
+        display: block;
+    }
+
+    .size-on-mobile {
+    	width: 125px;
+    }
+}
+
+@media screen and (max-width: 550px){ 
+    .cta-box {
+		display: block;
     }
 }
