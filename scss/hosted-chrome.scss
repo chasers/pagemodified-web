@@ -4,7 +4,6 @@
 }
 
 .hosted-chrome-content {
-	min-height: 250px;
 	padding-top: 25px;
 }
 
@@ -16,10 +15,12 @@
 	display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 250px;
 }
 
 .box-container {
-	padding: 5%;
+	padding-left: 2%;
+	padding-right: 2%;
     margin: auto;
     max-width: 900px;
 }
