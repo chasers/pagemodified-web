@@ -1,10 +1,25 @@
 .chrome-logo {
-    width: 200px;
+    max-width: 200px;
+    padding: 20px;
 }
 
 .hosted-chrome-content {
 	min-height: 250px;
-	width: 60%;
-	margin: auto;
 	padding-top: 25px;
+}
+
+.hosted-chrome-subhead {
+	font-size: 34px;
+}
+
+.box {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-container {
+	padding: 5%;
+    margin: auto;
+    max-width: 900px;
 }
