@@ -35,9 +35,17 @@
     justify-content: space-between;
     align-items: center;
     min-height: 225px;
-    flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.cta-box {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 250px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .box-container {
@@ -45,6 +53,17 @@
 	padding-right: 2%;
     margin: auto;
     max-width: 900px;
+}
+
+.cta-icon {
+	font-size: 60px;
+	color: #01a1dd;
+}
+
+.cta-content {
+	max-width: 300px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 @media screen and (max-width: 799px){
