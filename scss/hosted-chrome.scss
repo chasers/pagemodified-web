@@ -1,10 +1,29 @@
-.chrome-logo {
+#chrome-logo {
+    max-width: 225px;
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+#aws-logo {
+    max-width: 250px;
+    padding-right: 20px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+}
+
+#wikipedia-html {
+    max-width: 250px;
+}
+
+#responsive-example {
     max-width: 200px;
-    padding: 20px;
+    transform: rotateX(55deg) rotateY(0) rotateZ(-25deg) translate(-33px, -29px);
+    box-shadow: -12px 18px 5px rgba(0,0,0,.25);
 }
 
 .hosted-chrome-content {
-	padding-top: 25px;
+	padding-right: 20px;
+	max-width: 500px;
 }
 
 .hosted-chrome-subhead {
@@ -15,7 +34,10 @@
 	display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 250px;
+    min-height: 225px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .box-container {
@@ -23,4 +45,10 @@
 	padding-right: 2%;
     margin: auto;
     max-width: 900px;
+}
+
+@media screen and (max-width: 799px){
+    .hide-on-mobile {
+        display: none;
+    }
 }
