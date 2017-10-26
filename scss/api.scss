@@ -1,0 +1,40 @@
+#api-box-container {
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 60px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#decidor {
+	display: flex;
+	max-width: 400px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+	h2 {
+		text-align: center;
+		flex: 1;
+		background: yellow;
+		font-size: 40px;
+	}
+}
+
+.api-box {
+	background: white;
+	padding: 60px;
+	margin: 20px;
+
+	.button {
+		margin-top: 20px;
+	}
+	
+	h3 {
+		font-size: 34px;
+	}
+}
+
+#api-or {
+	font-weight: bold;
+	font-size: 20px;
+}
