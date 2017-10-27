@@ -9,21 +9,23 @@
 #decidor {
 	display: flex;
 	max-width: 400px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
 	h2 {
 		text-align: center;
 		flex: 1;
-		background: yellow;
+		background: rgb(234, 234, 234);
 		font-size: 40px;
 	}
 }
 
 .api-box {
 	background: white;
-	padding: 60px;
-	margin: 20px;
+	padding: 25px;
+	margin: 25px;
+	border-radius: 5px;
+	box-shadow: 0 0 30px rgba(0,0,0,.15);
 
 	.button {
 		margin-top: 20px;
@@ -31,6 +33,7 @@
 	
 	h3 {
 		font-size: 34px;
+		margin-bottom: 10px;
 	}
 }
 
