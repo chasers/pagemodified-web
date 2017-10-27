@@ -26,6 +26,8 @@
 	margin: 25px;
 	border-radius: 5px;
 	box-shadow: 0 0 30px rgba(0,0,0,.15);
+	max-width: 500px;
+	min-width: 40%;
 
 	.button {
 		margin-top: 20px;
@@ -40,4 +42,16 @@
 #api-or {
 	font-weight: bold;
 	font-size: 20px;
+}
+
+.api-features {
+	i {
+		color: #00b494;
+	    margin-right: 4px;
+	    display: inline-block;
+	}
+	li {
+		line-height: 2em;
+		text-indent: 5em hanging;
+	}
 }
