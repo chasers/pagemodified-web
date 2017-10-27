@@ -4,6 +4,19 @@
 	padding-bottom: 60px;
 	align-items: center;
 	flex-wrap: wrap;
+	padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+
+	h3 {
+		font-size: 34px;
+		margin-bottom: 10px;
+	}
+
+	.button {
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
 }
 
 #decidor {
@@ -23,20 +36,10 @@
 .api-box {
 	background: white;
 	padding: 25px;
-	margin: 25px;
 	border-radius: 5px;
 	box-shadow: 0 0 30px rgba(0,0,0,.15);
 	max-width: 500px;
-	min-width: 40%;
-
-	.button {
-		margin-top: 20px;
-	}
-	
-	h3 {
-		font-size: 34px;
-		margin-bottom: 10px;
-	}
+	min-width: 375px;
 }
 
 #api-or {
