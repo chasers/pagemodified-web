@@ -1,0 +1,27 @@
+#lower-footer {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+
+	div {
+		max-width: 600px;
+	}
+
+	div:nth-child(2) {
+		text-align: right;
+	}
+
+	lh {
+		font-weight: bold;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	ul {
+		margin-bottom: 20px
+	}
+
+	li {
+		padding-bottom: 5px;
+	}
+}

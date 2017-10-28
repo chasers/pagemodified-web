@@ -27,6 +27,7 @@ $baseurl: '{{ site.baseurl }}';
 @import 'mountain-scene';
 @import 'hosted-chrome';
 @import 'api';
+@import 'lower-footer';
 
 * {
   -webkit-box-sizing: border-box;
