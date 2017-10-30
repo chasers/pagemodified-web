@@ -8,3 +8,6 @@ sass:
   sass_dir: scss
   style: :compressed
   line_numbers: true
+
+plugins:
+  - jekyll-last-modified-at
