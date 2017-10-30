@@ -10,4 +10,3 @@ sass:
   line_numbers: true
 
 plugins:
-  - jekyll-last-modified-at
