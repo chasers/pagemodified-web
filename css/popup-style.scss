@@ -1,0 +1,16 @@
+---
+---
+$baseurl: '{{ site.baseurl }}';
+
+@import 'variables';
+
+.pm-general-pop-background {
+  background: rgba($black,.8);
+  color: $font-color;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 300;
+
+  @import 'popup-reset';
+  @import 'popup';
+}

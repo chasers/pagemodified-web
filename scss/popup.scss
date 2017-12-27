@@ -1,0 +1,205 @@
+$slide-padding-desktop: 100px;
+$slide-padding-mobile: 50px;
+$slide-padding-side: 20px;
+
+#om-canvas-whiteboard-optin {
+  background-color: transparent !important;
+  color: #000;
+  font-family: $font-family;
+  font-size: 16px;
+}
+#om-canvas-whiteboard-optin-wrap, .al-crawl-pop-body {
+  padding: 0 !important;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+a {
+  color: $link;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    color: darken($link, 10);
+  }
+}
+p {
+  color: $font-color;
+  font-size: 16px;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+// Headers
+h1, h2 {
+  font-family: $accent-font;
+  text-transform: uppercase;
+  text-shadow: -1px 1px 0px #fff, -2px 2px 0px #BDBEC0;
+}
+h1 {
+  font-size: 30px;
+  line-height: 1em;
+  color: $black;
+  margin-bottom: 15px;
+}
+.buttons {
+  margin-right: -20px;
+  div {
+    float: left;
+    width: 40%;
+    margin-right: 2%;
+  }
+  .screenshot {
+    text-align: right;
+    width: 100%;
+    margin-right: 0;
+    padding-top: 40px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.my-button {
+  padding: 15px 10px 12px;
+
+  color: $white;
+  display: block;
+  background: $main-color;
+  border: none;
+  @include transition(all .3s);
+
+  font-size: 20px !important;
+  line-height: 1.1em;
+  font-family: $accent-font;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $white;
+    background: lighten($main-color,10);
+  }
+  &.secondary {
+    background: #B3B3B3;
+    font-weight: normal;
+    &:hover {
+      color: $white;
+      background: lighten(#B3B3B3,10);
+    }
+  }
+}
+.features {
+  margin: 0 -30px -10px;
+  padding: 0 10px;
+  background: $main-color;
+  clear: both;
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 580px;
+  }
+}
+// Slide Customizations 
+.signup-box {
+  color: $gray-dark;
+  background: $white;
+  border: 10px solid $main-color;
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 20px;
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url($baseurl+'/img/topo-bg-2.png');
+  background-repeat: repeat;
+  background-size: 250px 250px;
+  background-position: center center;
+  .logo {
+    width: 100%;
+    max-width: 140px;
+    margin-bottom: 10px;
+  }
+  &.with-form {
+    p {
+      //font-size: 16px;
+    }
+  }
+}
+// Form
+.signup-form {
+  overflow: hidden;
+  max-width: 500px;
+  margin-bottom: 20px;
+  button, input {
+    float:left;
+    height: $field-height !important;
+    line-height: $field-height !important;
+    border: 2px solid $main-color !important;
+  }
+  input {
+    font-size: 16px !important;
+    height: 46px !important;
+    width: 60% !important;
+    padding: 0 10px 0 20px !important;
+    font-family: $font-family !important;
+    font-weight: 300 !important;
+    border-radius: 27px 0 0 27px !important;
+  }
+  button {
+    font-family: $accent-font;
+    text-transform: uppercase;
+    color: $white;
+    width: 78px !important;
+    font-size: 20px !important;
+    padding: 0 20px 0 10px !important;
+    background: $main-color !important;
+    border-radius: 0 27px 27px 0 !important;
+  }
+}
+@media all and (min-width: 440px) {
+
+.signup-box {
+  padding: 30px;
+  padding-bottom: 0;
+  h1, p {
+    margin-right: 128px;
+    max-width: 430px;
+  }
+}
+.my-button {
+  font-size: 18px;
+}
+
+}
+@media all and (min-width: 700px) {
+h1 {
+  font-size: 38px;
+}
+p {
+  font-size: 20px; 
+}
+.buttons {
+  margin-right: -30px;
+  div {
+    width: 20%;
+    padding-top: 20px;
+  }
+  .screenshot {
+    padding-top: 0;
+    width: 56%;
+    img {
+      margin-left: 20px;
+      max-width: 380px;
+    }
+  }
+}
+.signup-box {
+  .logo {
+    float: right;
+    max-width: 180px;
+  }
+}
+
+}

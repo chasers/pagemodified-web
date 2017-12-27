@@ -1,0 +1,26 @@
+
+div, span, 
+h1, h2, h3, h4, h5, h6, p,
+a, ol, ul, li,
+fieldset, form, label, legend {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    border-radius: 0;
+}
+input {
+    border-radius: 0;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
