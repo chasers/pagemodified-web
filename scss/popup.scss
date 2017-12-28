@@ -112,7 +112,7 @@ h1 {
   position: relative;
   overflow: hidden;
 
-  background-image: url($baseurl+'/img/topo-bg-2.png');
+  background-image: url($baseurl+'/topo-bg-2.png');
   background-repeat: repeat;
   background-size: 250px 250px;
   background-position: center center;
@@ -183,8 +183,9 @@ p {
 .buttons {
   margin-right: -30px;
   div {
-    width: 20%;
+    width: 21%;
     padding-top: 20px;
+    margin-right: 1%;
   }
   .screenshot {
     padding-top: 0;

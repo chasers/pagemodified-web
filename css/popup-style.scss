@@ -1,10 +1,22 @@
 ---
 ---
-$baseurl: '{{ site.baseurl }}';
+$baseurl: 'https://authoritylabs.com/wp-content/uploads/pm/';
 
 @import 'variables';
+@font-face {
+    font-family: 'langdonregular';
+    src: url('https://authoritylabs.com/wp-content/uploads/pm/langdon.eot');
+    src: url('https://authoritylabs.com/wp-content/uploads/pm/langdon.eot?#iefix') format('embedded-opentype'),
+         url('https://authoritylabs.com/wp-content/uploads/pm/langdon.woff2') format('woff2'),
+         url('https://authoritylabs.com/wp-content/uploads/pm/langdon.woff') format('woff'),
+         url('https://authoritylabs.com/wp-content/uploads/pm/langdon.ttf') format('truetype'),
+         url('https://authoritylabs.com/wp-content/uploads/pm/langdon.svg#langdonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-.pm-general-pop-background {
+//.pm-general-pop-background {
+html div#om-e95iqlm2ootqftmeeujm {
   background: rgba($black,.8);
   color: $font-color;
   font-family: $font-family;
