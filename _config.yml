@@ -1,7 +1,7 @@
 highlighter: rouge
 github: [Repository metadata]
 
-baseurl: "http://www.pagemodified.com"
+baseurl: ""
 
 # Sass
 sass:
