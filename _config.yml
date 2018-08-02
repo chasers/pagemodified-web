@@ -10,3 +10,4 @@ sass:
   line_numbers: true
 
 plugins:
+- jekyll-sitemap
