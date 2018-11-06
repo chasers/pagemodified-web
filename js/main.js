@@ -147,17 +147,17 @@ $(function(){
   function changePrice(priceType) {
     var priceValuesMonthly = {
       1: 0,
-      2: 3,
-      3: 5,
-      4: 10,
-      5: 25
+      2: 5,
+      3: 10,
+      4: 15,
+      5: 50
     },
     priceValuesAnnual = {
       1: 0,
-      2: 2.4,
-      3: 4,
-      4: 8,
-      5: 20
+      2: 4,
+      3: 8,
+      4: 12,
+      5: 40
     },
     priceValues = [],
     numberOfDomains = 0,
